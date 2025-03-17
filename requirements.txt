@@ -4,7 +4,6 @@ certifi==2025.1.31
 chardet==5.2.0
 cryptography==3.4.8
 Cython==3.0.12
-dbus-python==1.2.18
 defusedxml==0.7.1
 distro==1.7.0
 dj-database-url==2.3.0
@@ -22,7 +21,6 @@ lazr.uri==1.0.6
 more-itertools==8.10.0
 oauthlib==3.2.0
 Pygments==2.11.2
-PyGObject==3.42.1
 PyJWT==2.3.0
 pyparsing==2.4.7
 SecretStorage==3.3.1
