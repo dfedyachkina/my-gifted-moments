@@ -2,6 +2,10 @@ h1 {
     font-size: 1.5rem;
 }
 
+h2 {
+    font-size: 1.25rem;
+}
+
 .bg-light-pink {
     background-color: #F8A6C2;
 }
