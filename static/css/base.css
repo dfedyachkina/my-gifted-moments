@@ -6,10 +6,25 @@ h2 {
     font-size: 1.25rem;
 }
 
+/* Base header */
+
 .bg-light-pink {
     background-color: #ECB7C9;
 }
 
 .logo-image {
-    height: 150px;
+    height: 100px;
+    width: auto;
+}
+
+/* Nav bar */
+
+.main-nav {
+    background-color: #f7deea;
+}
+
+.dropdown-item:hover {
+    background-color: #f7deea;
+    border-radius: 20%;
+    transition: 2s;
 }
