@@ -34,7 +34,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-dfedyachkina-my-gifted-m-woaa2hwl4c.app.codeanywhere.com',
-    'my-gifted-moments-154948e92f6b.herokuapp.com'
+    'my-gifted-moments-154948e92f6b.herokuapp.com',
+    '8000-dfedyachkin-mygiftedmom-3t7037n063p.ws-eu118.gitpod.io'
     ]
 
 
