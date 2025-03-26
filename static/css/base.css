@@ -43,3 +43,23 @@ h2 {
     border-radius: 20%;
     transition: 2s;
 }
+
+/* Footer */
+footer {
+    background-color: #3a3a3a;
+}
+
+.social-media {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.social-items {
+    color: white;
+    margin: 10px;
+}
+
+.social-items:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
