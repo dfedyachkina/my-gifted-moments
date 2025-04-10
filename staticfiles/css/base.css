@@ -1,0 +1,141 @@
+/* Global */
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.75rem;
+}
+
+/* Base header */
+.bg-light-pink {
+    background-color: #ECB7C9;
+}
+
+.logo-image {
+    height: 150px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Nav bar */
+.main-nav {
+    background-color: #f7deea;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f2cde0;
+    transform: translateY(-2px);
+}
+
+/* Home */
+.home-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('/media/homepage-backgroung.jpg.avif') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: left;
+}
+
+/* Text styling override */
+.logo-font {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+/* Button tweaks */
+.btn-banner {
+    color: #3a3a3a;
+    background-color: #ffffff;
+    border: 2px solid #3a3a3a;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-banner:hover {
+    background-color: #f7deea;
+    color: #000;
+    transform: scale(1.05);
+}
+
+
+/* Footer */
+footer {
+    background-color: #3a3a3a;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #fff;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-items {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-items:hover {
+    transform: scale(1.15);
+    color: #ECB7C9;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .home-banner {
+        background-attachment: scroll;
+        padding: 3rem 1rem;
+    }
+
+    .home-banner-content {
+        padding: 1.5rem;
+        font-size: 0.95rem;
+    }
+}
