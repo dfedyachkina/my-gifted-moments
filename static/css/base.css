@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* Global */
 html {
     height: 100%;
@@ -55,6 +56,7 @@ h2 {
 }
 
 .dropdown-item:hover {
+    background-color: #f2cde0;
     transform: translateY(-2px);
 }
 
@@ -144,7 +146,7 @@ text-decoration: none;
 /* Footer */
 footer {
     background-color: #3a3a3a;
-padding: 2rem 1rem;
+    padding: 2rem 1rem;
     text-align: center;
     color: #ffffff77;
     font-family: "Roboto", serif;
@@ -172,5 +174,30 @@ padding: 2rem 1rem;
     color: #ECB7C9;
 }
 
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .home-banner {
+        background-attachment: scroll;
+        padding: 3rem 1rem;
+    }
+}
+
+@media (min-width: 930px) {
+
+    .home-banner {
+        height: 5vh;
+    }
+
+    .text-banner{
+        width: 60%;
+        margin-top: 150px;
+    }
+}
+
+@media (min-width:1200px) {
+.display-4 {
+    font-size: 2.5rem;
+}
 
 }
