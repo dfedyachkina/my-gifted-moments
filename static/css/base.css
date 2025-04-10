@@ -144,19 +144,33 @@ text-decoration: none;
 /* Footer */
 footer {
     background-color: #3a3a3a;
+padding: 2rem 1rem;
+    text-align: center;
+    color: #ffffff77;
+    font-family: "Roboto", serif;
+}
+
+.footer-header {
+    font-size: 1.5rem;
 }
 
 .social-media {
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-.social-items {
+.fa-brands {
     color: white;
-    margin: 10px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social-items:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+.fa-brands:hover {
+    transform: scale(1.15);
+    color: #ECB7C9;
+}
+
+
 }
