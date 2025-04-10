@@ -42,15 +42,33 @@ h2 {
 }
 
 /* Nav bar */
-
 .main-nav {
     background-color: #f7deea;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .dropdown-item:hover {
-    background-color: #f7deea;
-    border-radius: 20%;
-    transition: 2s;
+    transform: translateY(-2px);
+}
+
+/* Delivery banner */
+
+#delivery-banner {
+
+}
+
+.delivery-banner {
+    font-size: 1.5em;
+    font-family: "Playfair Display", serif;
+}
+
 }
 
 /* Footer */
