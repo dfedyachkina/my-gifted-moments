@@ -69,7 +69,77 @@ h2 {
     font-family: "Playfair Display", serif;
 }
 
+/* Home */
+.home-banner {
+    background: url('/media/freepik__adjust__81266.jpeg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: left;
 }
+
+.text-banner {
+    background-color: #f4a1b56b;
+border-radius: 25px;
+padding: 20px;
+box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.19);
+display: flex;
+flex-wrap: wrap;
+margin-top: 100px;
+font-family: "Playfair Display", serif;
+text-shadow: 1px 1px 1px rgba(34, 34, 34, 0.68);
+min-height: 100px;
+}
+
+.moment-word-banner {
+    font-family: "Imperial Script", cursive;
+    font-size: 1.5em;
+    color: rgb(213, 32, 32);
+    
+}
+
+/* Text styling override */
+.logo-font {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+/* Button tweaks */
+.btn-banner {
+    color: #3a3a3a;
+background-color: rgba(255, 255, 255, 0.57);
+padding: 0.75rem 1.5rem;
+font-size: 1rem;
+border-radius: 30px;
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+text-decoration: none;
+}
+
+.btn-banner:hover {
+    color: #fff;
+    transform: scale(1.05);
+    background-color: rgba(1, 71, 42, 0.62);
+}
+
+.home-text {
+    font-family: "Playfair Display", serif;
+    margin: 20px;
+    background-color: #dddddd6b;
+    border-radius: 25px;
+    padding: 20px 20px;
+    color: #3a3a3a;
+    font-size: 1.5em;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.19);
+
+}
+
 
 /* Footer */
 footer {
