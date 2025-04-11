@@ -159,3 +159,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # Secret Key
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
+
+CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
