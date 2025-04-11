@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* Global */
 html {
     height: 100%;
@@ -59,10 +60,20 @@ h2 {
     transform: translateY(-2px);
 }
 
+/* Delivery banner */
+
+#delivery-banner {
+
+}
+
+.delivery-banner {
+    font-size: 1.5em;
+    font-family: "Playfair Display", serif;
+}
+
 /* Home */
 .home-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('/media/homepage-backgroung.jpg.avif') no-repeat center center;
+    background: url('/media/freepik__adjust__81266.jpeg') no-repeat center center;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -75,6 +86,26 @@ h2 {
     text-align: left;
 }
 
+.text-banner {
+    background-color: #f4a1b56b;
+border-radius: 25px;
+padding: 20px;
+box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.19);
+display: flex;
+flex-wrap: wrap;
+margin-top: 100px;
+font-family: "Playfair Display", serif;
+text-shadow: 1px 1px 1px rgba(34, 34, 34, 0.68);
+min-height: 100px;
+}
+
+.moment-word-banner {
+    font-family: "Imperial Script", cursive;
+    font-size: 1.5em;
+    color: rgb(213, 32, 32);
+    
+}
+
 /* Text styling override */
 .logo-font {
     font-weight: 700;
@@ -84,19 +115,31 @@ h2 {
 /* Button tweaks */
 .btn-banner {
     color: #3a3a3a;
-    background-color: #ffffff;
-    border: 2px solid #3a3a3a;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+background-color: rgba(255, 255, 255, 0.57);
+padding: 0.75rem 1.5rem;
+font-size: 1rem;
+border-radius: 30px;
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+text-decoration: none;
 }
 
 .btn-banner:hover {
-    background-color: #f7deea;
-    color: #000;
+    color: #fff;
     transform: scale(1.05);
+    background-color: rgba(1, 71, 42, 0.62);
+}
+
+.home-text {
+    font-family: "Playfair Display", serif;
+    margin: 20px;
+    background-color: #dddddd6b;
+    border-radius: 25px;
+    padding: 20px 20px;
+    color: #3a3a3a;
+    font-size: 1.5em;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.19);
+
 }
 
 
@@ -105,7 +148,12 @@ footer {
     background-color: #3a3a3a;
     padding: 2rem 1rem;
     text-align: center;
-    color: #fff;
+    color: #ffffff77;
+    font-family: "Roboto", serif;
+}
+
+.footer-header {
+    font-size: 1.5rem;
 }
 
 .social-media {
@@ -115,13 +163,13 @@ footer {
     margin-top: 1rem;
 }
 
-.social-items {
+.fa-brands {
     color: white;
     font-size: 1.5rem;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.social-items:hover {
+.fa-brands:hover {
     transform: scale(1.15);
     color: #ECB7C9;
 }
@@ -133,9 +181,23 @@ footer {
         background-attachment: scroll;
         padding: 3rem 1rem;
     }
+}
 
-    .home-banner-content {
-        padding: 1.5rem;
-        font-size: 0.95rem;
+@media (min-width: 930px) {
+
+    .home-banner {
+        height: 5vh;
     }
+
+    .text-banner{
+        width: 60%;
+        margin-top: 150px;
+    }
+}
+
+@media (min-width:1200px) {
+.display-4 {
+    font-size: 2.5rem;
+}
+
 }
