@@ -73,16 +73,14 @@ h2 {
 
 /* Home */
 .home-banner {
-    background: url('/media/freepik__adjust__81266.jpeg') no-repeat center center;
+    background: url("{% static 'media/freepik__adjust__81266.jpeg' %}") no-repeat center center;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
-    padding: 4rem 0;
     text-align: left;
 }
 
@@ -93,7 +91,6 @@ padding: 20px;
 box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.19);
 display: flex;
 flex-wrap: wrap;
-margin-top: 100px;
 font-family: "Playfair Display", serif;
 text-shadow: 1px 1px 1px rgba(34, 34, 34, 0.68);
 min-height: 100px;

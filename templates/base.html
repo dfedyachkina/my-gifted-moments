@@ -41,9 +41,9 @@
     {% endblock %}
 
     <!-- Favicon -->
-    <link rel="icon" sizes="180x180" href="/media/favicon/favicon.ico">
-    <link rel="icon" sizes="32x32" href="/media/favicon/favicon-32x32.png">
-    <link rel="icon" sizes="16x16" href="/media/favicon/favicon-16x16.png">
+    <link rel="icon" sizes="180x180" href="{% static 'media/favicon/favicon.ico' %}">
+    <link rel="icon" sizes="32x32" href="{% static 'media/favicon/favicon-32x32.png' %}">
+    <link rel="icon" sizes="16x16" href="{% static 'media/favicon/favicon-16x16.png' %}">
 
     <title>My Gifted Moments {% block extra_title %}{% endblock %}</title>
 </head>
@@ -53,7 +53,7 @@
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
-              <img src="{{ MEDIA_URL }}my-gifted-moments-logo.png" alt="logo" class="logo-image">
+              <img src="{% static 'media/my-gifted-moments-logo.png' %}" alt="logo" class="logo-image">
             </a>
           </div>
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
