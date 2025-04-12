@@ -20,6 +20,7 @@ lazr.restfulclient==0.14.4
 lazr.uri==1.0.6
 more-itertools==8.10.0
 oauthlib==3.2.0
+pillow==11.1.0
 psycopg==3.2.6
 psycopg2==2.9.10
 Pygments==2.11.2
