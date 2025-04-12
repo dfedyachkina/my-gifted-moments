@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import Gifts, GiftDetailView
+from . import views
 
 urlpatterns = [
-    path('', Gifts.as_view(), name='gifts'),
-    path('gift/<int:pk>/', GiftDetailView.as_view(), name='gift_detail'),
+    path('', views.all_gifts, name='gifts'),
+    path('gift/<int:gift_id>/', views.gift_detail, name='gift_detail'),
 ]
