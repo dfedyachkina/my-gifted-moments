@@ -73,7 +73,7 @@ h2 {
 
 /* Home */
 .home-banner {
-    background: url("{% static 'media/freepik__adjust__81266.jpeg' %}") no-repeat center center;
+    background: url("/static/media/freepik__adjust__81266.jpeg") no-repeat center center;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
