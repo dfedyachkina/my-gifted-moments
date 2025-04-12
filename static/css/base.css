@@ -143,6 +143,26 @@ text-decoration: none;
 }
 
 
+/* Gifts page */
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
+
+.gift-img {
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+
 /* Footer */
 footer {
     background-color: #3a3a3a;
