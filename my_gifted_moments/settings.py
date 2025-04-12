@@ -66,6 +66,12 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+# CSRF Token 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-dfedyachkin-mygiftedmom-3t7037n063p.ws-eu118.gitpod.io',
+]
+
+
 ROOT_URLCONF = "my_gifted_moments.urls"
 TEMPLATES = [
     {
