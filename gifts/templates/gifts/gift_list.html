@@ -19,10 +19,10 @@
             <h2 class="logo-font text-uppercase">Gifts</h2>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'gifts' %}?category={{ c.name }}">
-                    <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">
+                <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">
                     {{ c.friendly_name }}
-                    </span>
-                </a>
+                </span>
+            </a>
             {% endfor %}
             <hr class="w-100 mb-1">
         </div>
@@ -55,9 +55,10 @@
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                            <span class="small"><a href="{% url 'home' %}">Gifts Home</a> | </span>
+                        <span class="small"><a href="{% url 'home' %}">Gifts Home</a> | </span>
                         {% endif %}
-                        {{ gifts|length }} Gift{{ gifts|length|pluralize }}{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        {{ gifts|length }} Gift{{ gifts|length|pluralize }}{% if search_term %} found for <strong>"{{
+                            search_term }}"</strong>{% endif %}
                     </p>
                 </div>
             </div>
@@ -66,16 +67,16 @@
             <div class="row">
                 {% for gift in gifts %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card h-100 border-0">
+                    <div class="card h-100 border-0">
                         {% if gift.image %}
-                            <a href="{% url 'gift_detail' gift.id %}">
-                                    <img class="card-img-top gift-img" src="{{ gift.image.url }}" alt="{{ gift.name }}">
+                        <a href="{% url 'gift_detail' gift.id %}">
+                            <img class="card-img-top gift-img" src="{{ gift.image.url }}" alt="{{ gift.name }}">
                         </a>
-                                {% else %}
+                        {% else %}
                         <a href="{% url 'gift_detail' gift.id %}">
                             <img class="card-img-top gift-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ gift.name }}">
                         </a>
-                                {% endif %}
+                        {% endif %}
                         <div class="card-body pb-0">
                             <p class="mb-0">{{ gift.name }}</p>
                         </div>
@@ -83,7 +84,7 @@
                             <div class="row">
                                 <div class="col">
                                     <p class="lead mb-0 text-left font-weight-bold">${{ gift.price }}</p>
-                                {% if gift.category %}
+                                    {% if gift.category %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted"
                                             href="{% url 'gifts' %}?category={{ gift.category.name }}">
@@ -96,12 +97,12 @@
                                         <a href="{% url 'edit_gift' gift.id %}">Edit</a> |
                                         <a class="text-danger" href="{% url 'delete_gift' gift.id %}">Delete</a>
                                     </small>
-                                {% endif %}
-                            </div>
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
                     </div>
-                    </div>
+                </div>
                 {% endfor %}
             </div>
 
@@ -113,36 +114,36 @@
 <div class="btt-button shadow-sm rounded-0 border border-black">
     <a class="btt-link d-flex h-100">
         <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-    </a>	
+    </a>
 </div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
+{{ block.super }}
+<script type="text/javascript">
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
-		})
-	</script>
-    
-    <script type="text/javascript">
-        $('#sort-selector').change(function() {
-            var selector = $(this);
-            var currentUrl = new URL(window.location);
-            var selectedVal = selector.val();
+    })
+</script>
+
+<script type="text/javascript">
+    $('#sort-selector').change(function() {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
+        var selectedVal = selector.val();
         if (selectedVal != "reset") {
-                var sort = selectedVal.split("_")[0];
-                var direction = selectedVal.split("_")[1];
-                currentUrl.searchParams.set("sort", sort);
-                currentUrl.searchParams.set("direction", direction);
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
-                window.location.replace(currentUrl);
-            }
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+            window.location.replace(currentUrl);
+        }
     });
-    </script>
+</script>
   
 
 
