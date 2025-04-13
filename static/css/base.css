@@ -158,6 +158,11 @@ text-decoration: none;
     width: 100%;
 }
 
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
 
 
 /* Footer */
