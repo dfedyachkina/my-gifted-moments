@@ -63,6 +63,8 @@ def all_gifts(request):
     }
 
     return render(request, 'gifts/gift_list.html', context)
+    print("Current sorting:", current_sorting)
+
 
 
 def gift_detail(request, gift_id):
@@ -73,3 +75,48 @@ def gift_detail(request, gift_id):
         'gift': gift,
     }
     return render(request, 'gifts/gift_detail.html', context)
+
+
+@login_required
+def edit_gift(request, gift_id):
+    """ Edit a gift in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    gift = get_object_or_404(Gift, pk=gift_id)
+    if request.method == 'POST':
+        form = GiftForm(request.POST, request.FILES, instance=gift)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated gift!')
+            return redirect(reverse('gift_detail', args=[gift.id]))
+        else:
+            messages.error(
+                request,
+                'Failed to update gift. Please ensure the form is valid.')
+    else:
+        form = GiftForm(instance=gift)
+        messages.info(request, f'You are editing {gift.name}')
+
+    template = 'gifts/edit_gift.html'
+    context = {
+        'form': form,
+        'gift': gift,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_gift(request, gift_id):
+    """ Delete a gift from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    gift = get_object_or_404(Gift, pk=gift_id)
+    gift.delete()
+    messages.success(request, 'Gift deleted!')
+    return redirect(reverse('gifts'))
+
