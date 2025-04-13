@@ -65,33 +65,46 @@
             <!-- Display All Gifts -->
             <div class="row">
                 {% for gift in gifts %}
-                    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card h-100 border-0">
+                        {% if gift.image %}
                             <a href="{% url 'gift_detail' gift.id %}">
-                                {% if gift.image %}
                                     <img class="card-img-top gift-img" src="{{ gift.image.url }}" alt="{{ gift.name }}">
+                        </a>
                                 {% else %}
-                                    <img class="card-img-top" src="{{ MEDIA_URL }}noimage.png" alt="{{ gift.name }}">
+                        <a href="{% url 'gift_detail' gift.id %}">
+                            <img class="card-img-top gift-img" src="{{ MEDIA_URL }}noimage.png" alt="{{ gift.name }}">
+                        </a>
                                 {% endif %}
-                            </a>
-                            <div class="card-body pb-0 text-center">
-                                <h5 class="card-title">{{ gift.name }}</h5>
-                                <p class="lead font-weight-bold">${{ gift.price }}</p>
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ gift.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">${{ gift.price }}</p>
                                 {% if gift.category %}
-                                    <p class="small text-muted">{{ gift.category.friendly_name }}</p>
+                                    <p class="small mt-1 mb-0">
+                                        <a class="text-muted"
+                                            href="{% url 'gifts' %}?category={{ gift.category.name }}">
+                                            <i class="fas fa-tag mr-1"></i>{{ gift.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                    {% endif %}
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_gift' gift.id %}">Edit</a> |
+                                        <a class="text-danger" href="{% url 'delete_gift' gift.id %}">Delete</a>
+                                    </small>
                                 {% endif %}
                             </div>
-                            <div class="card-footer bg-white border-0 text-center">
-                                <a href="{% url 'gift_detail' gift.id %}" class="btn btn-outline-dark btn-sm rounded-0">View</a>
                             </div>
                         </div>
                     </div>
-                {% empty %}
-                    <div class="col text-center">
-                        <p>No gifts available at the moment.</p>
                     </div>
                 {% endfor %}
             </div>
+
 
         </div>
     </div>
