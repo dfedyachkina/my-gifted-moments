@@ -4,7 +4,8 @@ from cloudinary.models import CloudinaryField
 
 class Occasion(models.Model):
     """ Custom model for occasions: wedding, baby shower, etc. """
-    name = models.CharField(max_length=75, unique=True)
+    name = models.CharField(max_length=254)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
         return self.name
