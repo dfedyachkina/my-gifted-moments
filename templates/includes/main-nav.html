@@ -5,10 +5,10 @@
                 All gifts
             </a>
             <ul class="dropdown-menu border-0" aria-labelledby="all-gifts">
-                <li><a href="#" class="dropdown-item">By Price</a></li>
-                <li><a href="#" class="dropdown-item">By Rating</a></li>
-                <li><a href="#" class="dropdown-item">By Category</a></li>
-                <li><a href="#" class="dropdown-item">All Gifts</a></li>
+                <li><a href="{% url 'gifts' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
+                <li><a href="{% url 'gifts' %}?sort=occasion&direction=desc" class="dropdown-item">By Occasion</a></li>
+                <li><a href="{% url 'gifts' %}?sort=category&direction=asc" class="dropdown-item">By Category</a></li>
+                <li><a href="{% url 'gifts' %}" class="dropdown-item">All Gifts</a></li>
             </ul>
         </li>
 
@@ -17,11 +17,11 @@
                 Flowers & Chocolates
             </a>
             <ul class="dropdown-menu border-0" aria-labelledby="flowers-chocolates">
-                <li><a href="#" class="dropdown-item">Bouquets</a></li>
-                <li><a href="#" class="dropdown-item">Flowers Box</a></li>
-                <li><a href="#" class="dropdown-item">Chocolate Box</a></li>
-                <li><a href="#" class="dropdown-item">Flowers & Chocolate Box</a></li>
-                <li><a href="#" class="dropdown-item">All Flowers & Chocolate Boxes</a></li>
+                <li><a href="{% url 'gifts' %}?category=bouquets" class="dropdown-item">Bouquets</a></li>
+                <li><a href="{% url 'gifts' %}?category=flowers_box" class="dropdown-item">Flowers Box</a></li>
+                <li><a href="{% url 'gifts' %}?category=chocolate_box" class="dropdown-item">Chocolate Box</a></li>
+                <li><a href="{% url 'gifts' %}?category=flowers_chocolate_box" class="dropdown-item">Flowers & Chocolate Box</a></li>
+                <li><a href="{% url 'gifts' %}?category=bouquets,flowers_box,chocolate_box,flowers_chocolate_box" class="dropdown-item">All Flowers & Chocolate Boxes</a></li>
             </ul>
         </li>
 
@@ -30,10 +30,10 @@
                 Gift Boxes & Gift Cards
             </a>
             <ul class="dropdown-menu border-0" aria-labelledby="gift-boxes-cards">
-                <li><a href="#" class="dropdown-item">Gift Boxes</a></li>
-                <li><a href="#" class="dropdown-item">Filled Gift Boxes</a></li>
-                <li><a href="#" class="dropdown-item">Gift Cards</a></li>
-                <li><a href="#" class="dropdown-item">All</a></li>
+                <li><a href="{% url 'gifts' %}?category=empty_gift_box"  class="dropdown-item">Gift Boxes</a></li>
+                <li><a href="{% url 'gifts' %}?category=filled_gift_box"  class="dropdown-item">Filled Gift Boxes</a></li>
+                <li><a href="{% url 'gifts' %}?category=gift_cards"  class="dropdown-item">Gift Cards</a></li>
+                <li><a href="{% url 'gifts' %}?category=filled_gift_box,empty_gift_box,gift_card"  class="dropdown-item">All</a></li>
             </ul>
         </li>
 
@@ -42,10 +42,10 @@
                 Balloons
             </a>
             <ul class="dropdown-menu border-0" aria-labelledby="balloons">
-                <li><a href="#" class="dropdown-item">Baby Shower Balloons</a></li>
-                <li><a href="#" class="dropdown-item">Birthday Balloons</a></li>
-                <li><a href="#" class="dropdown-item">Balloons</a></li>
-                <li><a href="#" class="dropdown-item">All Balloons</a></li>
+                <li><a href="{% url 'gifts' %}?category=balloons&occasion=baby_shower" class="dropdown-item">Baby Shower Balloons</a></li>
+                <li><a href="{% url 'gifts' %}?category=balloons&occasion=birthday"class="dropdown-item">Birthday Balloons</a></li>
+                <li><a href="{% url 'gifts' %}?category=balloons&occasion=none" class="dropdown-item">Balloons</a></li>
+                <li><a href="{% url 'gifts' %}?category=balloons" class="dropdown-item">All Balloons</a></li>
             </ul>
         </li>
 
@@ -54,10 +54,10 @@
                 Occasions
             </a>
             <ul class="dropdown-menu border-0" aria-labelledby="occasions">
-                <li><a href="#" class="dropdown-item">Birthday</a></li>
-                <li><a href="#" class="dropdown-item">Wedding day</a></li>
-                <li><a href="#" class="dropdown-item">Baby Shower</a></li>
-                <li><a href="#" class="dropdown-item">All Occasions</a></li>
+                <li><a href="{% url 'gifts' %}?occasion=birthday" class="dropdown-item">Birthday</a></li>
+                <li><a href="{% url 'gifts' %}?occasion=wedding" class="dropdown-item">Wedding day</a></li>
+                <li><a href="{% url 'gifts' %}?occasion=baby_shower"class="dropdown-item">Baby Shower</a></li>
+                <li><a href="{% url 'gifts' %}?occasion=birthday,wedding,baby_shower,none" class="dropdown-item">All Occasions</a></li>
             </ul>
         </li>
         <li class="nav-item dropdown">
