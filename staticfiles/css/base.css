@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Global */
 html {
     height: 100%;
@@ -62,9 +63,7 @@ h2 {
 
 /* Delivery banner */
 
-#delivery-banner {
-
-}
+#delivery-banner {}
 
 .delivery-banner {
     font-size: 1.5em;
@@ -86,21 +85,21 @@ h2 {
 
 .text-banner {
     background-color: #f4a1b56b;
-border-radius: 25px;
-padding: 20px;
-box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.19);
-display: flex;
-flex-wrap: wrap;
-font-family: "Playfair Display", serif;
-text-shadow: 1px 1px 1px rgba(34, 34, 34, 0.68);
-min-height: 100px;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Playfair Display", serif;
+    text-shadow: 1px 1px 1px rgba(34, 34, 34, 0.68);
+    min-height: 100px;
 }
 
 .moment-word-banner {
     font-family: "Imperial Script", cursive;
     font-size: 1.5em;
     color: rgb(213, 32, 32);
-    
+
 }
 
 /* Text styling override */
@@ -112,13 +111,13 @@ min-height: 100px;
 /* Button tweaks */
 .btn-banner {
     color: #3a3a3a;
-background-color: rgba(255, 255, 255, 0.57);
-padding: 0.75rem 1.5rem;
-font-size: 1rem;
-border-radius: 30px;
-cursor: pointer;
-transition: all 0.3s ease-in-out;
-text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.57);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
 }
 
 .btn-banner:hover {
@@ -142,13 +141,13 @@ text-decoration: none;
 
 /* Gifts page */
 .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
 }
 
 
@@ -156,6 +155,40 @@ text-decoration: none;
     height: 350px;
     object-fit: cover;
     width: 100%;
+}
+
+.gift-img-detail {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+a.category-badge>span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.bag-div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Bag page */
+
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
 }
 
 
@@ -202,15 +235,15 @@ footer {
 
 @media (min-width: 930px) {
 
-    .text-banner{
+    .text-banner {
         width: 60%;
         margin-top: 150px;
     }
 }
 
 @media (min-width:1200px) {
-.display-4 {
-    font-size: 2.5rem;
-}
+    .display-4 {
+        font-size: 2.5rem;
+    }
 
 }
