@@ -93,11 +93,16 @@
                 </ul>
               </li>
               <li class="list-inline-item">
-                <a class="nav-link" href="#">
-                  <div class="text-center nav-icons">
-                    <i class="fas fa-user fa-lg me-1"></i>
-                    <i class="fas fa-shopping-bag fa-lg me-1"></i>
-                    <p class="my-0"></p>
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'bag' %}">
+              <div class="text-center bag-div">
+                <i class="fa-solid fa-cart-shopping"></i>              
+                  <p class="my-0">
+                  {% if grand_total %}
+                  ${{ grand_total|floatformat:2 }}
+                  {% else %}
+                  $0.00
+                  {% endif %}
+                </p>
                   </div>
                 </a>
               </li>
@@ -130,10 +135,14 @@
       <footer>
         <div class="social-media">
           <h4 class="footer-header">Find us on social media:</h4>
-          <a class='social-item' href="https://facebook.com" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
-          <a class='social-item' href="https://instagram.com" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-          <a class='social-item' href="https://youtube.com" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
-          <a class='social-item' href="https://twitter.com" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i></a>
+      <a class='social-item' href="https://facebook.com" rel="noopener noreferrer"><i
+          class="fa-brands fa-facebook-f"></i></a>
+      <a class='social-item' href="https://instagram.com" rel="noopener noreferrer"><i
+          class="fa-brands fa-instagram"></i></a>
+      <a class='social-item' href="https://youtube.com" rel="noopener noreferrer"><i
+          class="fa-brands fa-youtube"></i></a>
+      <a class='social-item' href="https://twitter.com" rel="noopener noreferrer"><i
+          class="fa-brands fa-x-twitter"></i></a>
         </div>
       </footer>
 
