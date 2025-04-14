@@ -24,6 +24,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('', include('home.urls')),
     path('gifts/', include('gifts.urls')),
+    path('bag/', include('bag.urls')),
 ]
 
 if settings.DEBUG:
