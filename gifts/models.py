@@ -42,6 +42,7 @@ class Gift(models.Model):
     """ Custom model for gifts. """
     name = models.CharField(max_length=255, null=False, blank=False)
     description = models.TextField(null=False, blank=False)
+    has_sizes = models.BooleanField(default=False, null=True, blank=True)
     occasion = models.ForeignKey(Occasion, on_delete=models.CASCADE, related_name="gifts_by_occasion")
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="gifts_by_category")
     size = models.ForeignKey(Size, on_delete=models.CASCADE, related_name="gifts_by_size")
