@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Global */
 html {
     height: 100%;
@@ -158,7 +159,14 @@ text-decoration: none;
     width: 100%;
 }
 
-a.category-badge > span.badge:hover {
+.gift-img-detail {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+a.category-badge>span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
 }
