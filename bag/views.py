@@ -52,10 +52,48 @@ def adjust_bag(request, item_id):
         size = request.POST['gift_size']
     bag = request.session.get('bag', {})
 
-    if item_id in list(bag.keys()):
-        bag[item_id] += quantity
+    if size:
+        if quantity > 0:
+            bag[item_id]['items_by_size'][size] = quantity
+            messages.success(request, f'Updated size {size.upper()} {gift.name} quantity to {bag[item_id]["items_by_size"][size]}')
+        else:
+            del bag[item_id]['items_by_size'][size]
+            if not bag[item_id]['items_by_size']:
+                bag.pop(item_id)
+                messages.success(request, f'Removed size {size.upper()} {gift.name} from your bag')
     else:
-        bag[item_id] = quantity
+        if quantity > 0:
+            bag[item_id] = quantity
+            messages.success(request, f'Updated {gift.name} quantity to {bag[item_id]}')
+        else:
+            bag.pop(item_id)
+            messages.success(request, f'Removed {gift.name} from your bag')
 
     request.session['bag'] = bag
-    return redirect(redirect_url)
+    return redirect(reverse('bag'))
+
+
+def remove_from_bag(request, item_id):
+    """ Remove the item from the shopping bag """
+    try:
+        gift = get_object_or_404(Gift, pk=item_id)
+        size = None
+        if 'gift_size' in request.POST:
+            size = request.POST['giftsize']
+        bag = request.session.get('bag', {})
+
+        if size:
+            del bag[item_id]['items_by_size'][size]
+            if not bag[item_id]['items_by_size']:
+                bag.pop(item_id)
+            messages.success(request, f'Removed size {size.upper()} {gift.name} from your bag')
+        else:
+            bag.pop(item_id)
+            messages.success(request, f'Removed {gift.name} from your bag')
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+    
+    except Exception as e:
+        messages.error(request, f'Error removing item:{e}')
+        return HttpResponse(status=500)
