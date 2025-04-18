@@ -36,7 +36,20 @@ def add_to_bag(request, item_id):
             messages.success(request, f'Updated {gift.name} quantity to {bag[item_id]}')
         else:
             bag[item_id] = quantity
-            
+            messages.success(request, f'Added {gift.name} to your bag')
+
+    request.session['bag'] = bag
+    return redirect(redirect_url)
+
+
+def adjust_bag(request, item_id):
+    """ Adjust the quantity of the specified gift to the specified amount """
+
+    gift = get_object_or_404(Gift, pk=item_id)
+    quantity = int(request.POST.get('quantity'))
+    size = None
+    if 'gift_size' in request.POST:
+        size = request.POST['gift_size']
     bag = request.session.get('bag', {})
 
     if item_id in list(bag.keys()):
