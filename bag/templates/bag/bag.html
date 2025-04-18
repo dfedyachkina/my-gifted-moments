@@ -94,7 +94,22 @@
                         {% endif %}
                     </td>
                 </tr>
-            </tfoot>
+            <tr>
+                <td colspan="5" class="text-right">
+                    <a href="{% url 'gifts' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
+                    </a>
+                    <a href="" class="btn btn-black rounded-0 btn-lg">
+                        <span class="text-uppercase">Secure Checkout</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </a>
+                </td>
+            </tr>
         </table>
     </div>
 {% else %}
@@ -106,5 +121,12 @@
         <span class="text-uppercase">Keep Shopping</span>
     </a>
 {% endif %}
+</div>
+</div>
+</div>
+{% endblock %}
 
+{% block postloadjs %}
+{{ block.super }}
+{% include 'gifts/includes/quantity_input_script.html' %}
 {% endblock %}
