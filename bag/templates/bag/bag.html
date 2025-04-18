@@ -3,11 +3,11 @@
 {% load bag_tools %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -18,32 +18,32 @@
 </div>
 </div>
 {% if bag_items %}
-    <div class="table-responsive rounded h-75">
-        <table class="table table-sm table-borderless">
-            <thead class="text-black">
-                <tr>
-                    <th scope="col">Gift Info</th>
-                    <th scope="col"></th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Qty</th>
-                    <th scope="col">Subtotal</th>
-                </tr>
-            </thead>
-            <tbody>
+<div class="table-responsive rounded h-75">
+    <table class="table table-sm table-borderless">
+        <thead class="text-black">
+            <tr>
+                <th scope="col">Gift Info</th>
+                <th scope="col"></th>
+                <th scope="col">Price</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
             {% for item in bag_items %}
-                <tr>
-                    <td class="p-3 w-25">
-                        <img class="img-fluid rounded" src="{{ item.gift.image.url }}">
-                    </td>
-                    <td class="py-3">
-                        <p class="my-0"><strong>{{ item.gift.name }}</strong></p>
+            <tr>
+                <td class="p-3 w-25">
+                    <img class="img-fluid rounded" src="{{ item.gift.image.url }}">
+                </td>
+                <td class="py-3">
+                    <p class="my-0"><strong>{{ item.gift.name }}</strong></p>
                     <p class="my-0"><strong>Size: </strong>{% if item.gift.has_sizes %}{{ item.size|upper }}{% else
                         %}N/A{% endif %}</p>
-                    </td>
-                    <td class="py-3">
-                        <p class="my-0">${{ item.gift.price }}</p>
-                    </td>
-                    <td class="py-3 w-25">
+                </td>
+                <td class="py-3">
+                    <p class="my-0">${{ item.gift.price }}</p>
+                </td>
+                <td class="py-3 w-25">
                     <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                         {% csrf_token %}
                         <div class="form-group">
@@ -76,24 +76,24 @@
                     <a class="update-link text-info"><small>Update</small></a>
                     <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
                         data-size="{{ item.size }}"><small>Remove</small></a>
-                    </td>
-                    <td class="py-3">
+                </td>
+                <td class="py-3">
                     <p class="my-0">${{ item.gift.price | calc_subtotal:item.quantity}}</p>
-                    </td>
-                </tr>
+                </td>
+            </tr>
             {% endfor %}
-                <tr>
-                    <td colspan="5" class="pt-5 text-right">
-                        <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                        <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                        <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
-                        {% if free_delivery_delta > 0 %}
-                            <p class="mb-1 text-danger">
-                                You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
-                            </p>
-                        {% endif %}
-                    </td>
-                </tr>
+            <tr>
+                <td colspan="5" class="pt-5 text-right">
+                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                    {% if free_delivery_delta > 0 %}
+                    <p class="mb-1 text-danger">
+                        You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                    </p>
+                    {% endif %}
+                </td>
+            </tr>
             <tr>
                 <td colspan="5" class="text-right">
                     <a href="{% url 'gifts' %}" class="btn btn-outline-black rounded-0 btn-lg">
@@ -110,16 +110,16 @@
                     </a>
                 </td>
             </tr>
-        </table>
-    </div>
+    </table>
+</div>
 {% else %}
-    <p class="lead mb-5">Your bag is empty.</p>
-    <a href="{% url 'gifts' %}" class="btn btn-outline-black rounded-0 btn-lg">
-        <span class="icon">
-            <i class="fas fa-chevron-left"></i>
-        </span>
-        <span class="text-uppercase">Keep Shopping</span>
-    </a>
+<p class="lead mb-5">Your bag is empty.</p>
+<a href="{% url 'gifts' %}" class="btn btn-outline-black rounded-0 btn-lg">
+    <span class="icon">
+        <i class="fas fa-chevron-left"></i>
+    </span>
+    <span class="text-uppercase">Keep Shopping</span>
+</a>
 {% endif %}
 </div>
 </div>
