@@ -103,6 +103,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "my_gifted_moments.wsgi.application"
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
