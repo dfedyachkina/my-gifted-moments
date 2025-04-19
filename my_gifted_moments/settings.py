@@ -67,7 +67,12 @@ INSTALLED_APPS = [
     'crispy_forms',
 ]
 
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 MIDDLEWARE = [
+    'allauth.account.middleware.AccountMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -78,6 +83,8 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 
 ]
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # CSRF Token 
 CSRF_TRUSTED_ORIGINS = [
