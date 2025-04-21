@@ -81,7 +81,7 @@
             <ul class="dropdown-menu border-0" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
-              <li><a href="#" class="dropdown-item">Gift Management</a></li>
+              <li><a href="{% url 'add_gift' %}" class="dropdown-item">Gift Management</a></li>
               {% endif %}
               <li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
               <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
@@ -92,7 +92,7 @@
             </ul>
           </li>
           <li class="list-inline-item">
-            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'bag' %}">
+            <a class="{% if grand_total %}darkgreen font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'bag' %}">
               <div class="text-center bag-div">
                 <i class="fa-solid fa-cart-shopping"></i>              
                   <p class="my-0">
