@@ -1,13 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Global */
-html {
-    height: 100%;
-    scroll-behavior: smooth;
+* {
+    box-sizing: border-box;
 }
 
+body, html {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+
 body {
-    height: calc(100vh - 164px);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     color: #555;
     font-family: 'Lato', sans-serif;
     background-color: #fff;
@@ -15,6 +26,12 @@ body {
     padding: 0;
     line-height: 1.6;
 }
+
+div {
+    padding: 0px 15px 0px 15px;
+}
+
+
 
 /* Typography */
 h1 {
@@ -41,6 +58,10 @@ h2 {
     width: auto;
     display: block;
     margin: 0 auto;
+}
+
+.darkgreen {
+    color: rgb(3 82 49) !important;
 }
 
 /* Nav bar */
@@ -100,6 +121,24 @@ h2 {
     font-size: 1.5em;
     color: rgb(213, 32, 32);
 
+}
+
+.btt-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
+    border: 1px solid #000;
+    color: #000;
+    padding: 12px 16px;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.btt-btn:hover {
+    background: #000;
+    color: #fff;
+    transform: scale(1.1);
 }
 
 /* Text styling override */
@@ -171,17 +210,16 @@ a.category-badge > span.badge:hover {
 
 /* Bag page */
 
-.btn-outline-black {
+.btn-outline-darkgreen {
     background: white;
     color: black !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
+.btn-outline-darkgreen:hover,
+.btn-outline-darkgreen:active,
+.btn-outline-darkgreen:focus {
+    color: rgba(1, 71, 42, 0.62) !important;
 }
 
 .btt-link,
@@ -322,15 +360,14 @@ input[name='q']::placeholder {
 
 /* Footer */
 footer {
-    background-color: #3a3a3a;
-    padding: 2rem 1rem;
-    text-align: center;
-    color: #ffffff77;
-    font-family: "Roboto", serif;
+    margin-top: auto;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
 }
 
 .footer-header {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .social-media {
@@ -349,6 +386,12 @@ footer {
 .fa-brands:hover {
     transform: scale(1.15);
     color: #ECB7C9;
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
 }
 
 
