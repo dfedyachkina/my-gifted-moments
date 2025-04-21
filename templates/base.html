@@ -172,13 +172,21 @@
   {% block postloadjs %}
 
   <script type="text/javascript">
-    const toastElList = document.querySelectorAll('.toast');
-    toastElList.forEach((toastEl) => {
-      const toast = new bootstrap.Toast(toastEl);
-      toast.show();
+    document.addEventListener('DOMContentLoaded', function () {
+      var toastElList = document.querySelectorAll('.toast');
+      toastElList.forEach(function (toastEl) {
+        var toast = new bootstrap.Toast(toastEl);
+        toast.show();
+        
+        // Add a listener to close the toast when the button is clicked
+        var closeButton = toastEl.querySelector('.close');
+        closeButton.addEventListener('click', function () {
+          toast.hide();
+        });
+      });
     });
-
   </script>
+  
 
   {% endblock %}
 
