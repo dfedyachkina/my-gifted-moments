@@ -3,7 +3,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from .models import Gift, Category, Occasion
+from .forms import GiftForm
 
 def all_gifts(request):
     """ A view to show all gifts, including sorting and search queries """
@@ -75,6 +77,31 @@ def gift_detail(request, gift_id):
         'gift': gift,
     }
     return render(request, 'gifts/gift_detail.html', context)
+
+@login_required
+def add_gift(request):
+    """ Add a gift to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = GiftForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added gift!')
+            return redirect(reverse('add_gift'))
+        else:
+            messages.error(request, 'Failed to add gift. Please ensure the form is valid.')
+    else:
+        form = GiftForm()
+        
+    template = 'gifts/add_gift.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
 
 
 @login_required
