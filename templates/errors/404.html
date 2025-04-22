@@ -1,26 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block content %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    The page you are looking for isn't available
+<div class="container py-5">
+    <div class="row justify-content-center align-items-center min-vh-75 text-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="p-5 shadow-sm rounded bg-white">
+                <h1 class="display-5 fw-bold text-danger mb-4">
+                    Oops! Page Not Found
                 </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'gifts' %}" 
-                            class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                                Return to shop
-                        </a>
-                    </h4>
-                </div>
+                <p class="lead text-muted mb-4">
+                    The page you’re looking for isn’t available or might have been moved.
+                </p>
+                <a href="{% url 'gifts' %}" class="btn btn-outline-dark btn-lg px-4 rounded-0 text-uppercase">
+                    Return to Shop
+                </a>
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
