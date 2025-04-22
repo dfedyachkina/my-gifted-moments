@@ -20,6 +20,17 @@
         {% empty %}
         <p>No FAQs found.</p>
         {% endfor %}
+        <div class="row my-5">
+            <div class="col-md-10 col-lg-8 mx-auto text-center p-4 border rounded shadow-sm bg-light">
+                <p class="mb-3 fs-5">
+                    Didn't find an answer to your question? <br>
+                    Fill out our contact form and we’ll gladly assist you!
+                </p>
+                <a href="{% url 'contact' %}" class="btn btn-outline-dark btn-lg">
+                    Contact Us
+                </a>
+            </div>
+        </div>  
     </div>
 </div>
 {% endblock %}
