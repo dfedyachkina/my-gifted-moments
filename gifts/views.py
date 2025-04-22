@@ -5,6 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Gift, Category, Occasion
+from favorites.models import Favorite
 from .forms import GiftForm
 
 def all_gifts(request):
@@ -70,13 +71,18 @@ def all_gifts(request):
 
 
 def gift_detail(request, gift_id):
-    """ A view to show individual gift details """
     gift = get_object_or_404(Gift, pk=gift_id)
+
+    is_favorited = False
+    if request.user.is_authenticated:
+        is_favorited = Favorite.objects.filter(user=request.user, gift=gift).exists()
 
     context = {
         'gift': gift,
+        'is_favorited': is_favorited,
     }
     return render(request, 'gifts/gift_detail.html', context)
+
 
 @login_required
 def add_gift(request):
