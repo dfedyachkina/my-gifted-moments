@@ -30,6 +30,7 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('favorites/', include('favorites.urls')),
     path('faq/', include('faq.urls')),
+    path('contact/', include('contact.urls')),
 ]
 
 if settings.DEBUG:
