@@ -445,10 +445,6 @@ footer .copyright {
 }
 
 @media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
     body {
         height: calc(100vh - 116px);
     }
@@ -491,6 +487,10 @@ footer .copyright {
     .btn.btn-success.rounded-0.btn-lg{
         padding: .375rem .375rem;
         font-size: .75rem;
+    }
+
+    .btn-outline-dark {
+        margin-bottom: 10px;
     }
 
     .increment-qty, .decrement-qty {
