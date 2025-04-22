@@ -20,7 +20,7 @@
 {% if bag_items %}
 <div class="table-responsive rounded h-75">
     <table class="table table-sm table-borderless">
-        <thead class="text-black">
+        <thead class="text-black d-none d-sm-table-header-group">
             <tr>
                 <th scope="col">Gift Info</th>
                 <th scope="col"></th>
@@ -31,51 +31,60 @@
         </thead>
         <tbody>
             {% for item in bag_items %}
-            <tr>
-                <td class="p-3 w-25">
+            <tr class="d-block d-sm-table-row mb-4">
+                <!-- Gift Image -->
+                <td class="p-3 d-block d-sm-table-cell text-center">
                     {% if item.gift.image %}
-                    <img class="gift-img rounded" src="{{ item.gift.image.url }}" alt="{{ item.gift.name }}">
+                    <img class="gift-img-bag rounded" src="{{ item.gift.image.url }}" alt="{{ item.gift.name }}">
                     {% else %}
-                    <img class="gift-img rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.gift.name }}">
+                    <img class="gift-img-bag rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.gift.name }}">
                     {% endif %}
                 </td>
-                <td class="py-3">
-                    <p class="my-0"><strong>{{ item.gift.name }}</strong></p>
-                    <p class="my-0"><strong>Size: </strong>{% if item.gift.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+
+                <!-- Gift Info -->
+                <td class="py-2 d-block d-sm-table-cell">
+                    <p class="mb-1 fw-bold">{{ item.gift.name }}</p>
+                    <p class="mb-1"><strong>Size:</strong> {% if item.gift.has_sizes %}{{ item.size|upper }}{% else
+                        %}N/A{% endif %}</p>
                 </td>
-                <td class="py-3">
-                    <p class="my-0">${{ item.gift.price }}</p>
+
+                <!-- Price -->
+                <td class="py-2 d-block d-sm-table-cell">
+                    <p class="mb-1">${{ item.gift.price }}</p>
                 </td>
-                <td class="py-3 w-25">
+
+                <!-- Quantity + Remove -->
+                <td class="py-2 d-block d-sm-table-cell">
                     <form class="update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                         {% csrf_token %}
-                        <div class="mb-2">
-                            <div class="input-group input-group-sm">
-                                <button class="decrement-qty btn btn-black rounded-0"
-                                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                    <i class="fas fa-minus fa-sm"></i>
-                                </button>
-                                <input type="number" name="quantity"
-                                    class="form-control qty_input text-center"
-                                    value="{{ item.quantity }}" min="1" max="99"
-                                    data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                                <button class="increment-qty btn btn-black rounded-0"
-                                    data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                    <i class="fas fa-plus fa-sm"></i>
-                                </button>
-                                {% if item.gift.has_sizes %}
-                                <input type="hidden" name="gift_size" value="{{ item.size }}">
-                                {% endif %}
-                            </div>
+                        <div class="input-group input-group-sm">
+                            <button class="decrement-qty btn btn-black rounded-0" data-item_id="{{ item.item_id }}"
+                                id="decrement-qty_{{ item.item_id }}">
+                                <i class="fas fa-minus fa-sm"></i>
+                            </button>
+                            <input type="number" name="quantity" class="form-control qty_input text-center"
+                                value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
+                                id="id_qty_{{ item.item_id }}">
+                            <button class="increment-qty btn btn-black rounded-0" data-item_id="{{ item.item_id }}"
+                                id="increment-qty_{{ item.item_id }}">
+                                <i class="fas fa-plus fa-sm"></i>
+                            </button>
+                            {% if item.gift.has_sizes %}
+                            <input type="hidden" name="gift_size" value="{{ item.size }}">
+                            {% endif %}
                         </div>
                     </form>
-                    <a class="update-link text-info"><small>Update</small></a>
-                    <a class="remove-item text-danger float-end" id="remove_{{ item.item_id }}"
-                        data-size="{{ item.size }}"><small>Remove</small></a>
-                </td>
-                <td class="py-3">
-                    <p class="my-0">${{ item.gift.price|calc_subtotal:item.quantity }}</p>
-                </td>
+                    <div class="d-flex justify-content-between mt-2">
+                        <a class="update-link text-info me-1"><small>Update</small></a>
+                        <a class="remove-item text-danger float-end" id="remove_{{ item.item_id }}"
+                            data-size="{{ item.size }}"><small>Remove</small></a>
+                    </div>
+            </td>
+
+            <!-- Subtotal -->
+            <td class="py-2 d-block d-sm-table-cell">
+                <p class="mb-1">${{ item.gift.price|calc_subtotal:item.quantity }}</p>
+            </td>
             </tr>
             {% endfor %}
             <tr>
@@ -92,18 +101,18 @@
             </tr>
             <tr>
                 <td colspan="5" class="text-end">
-                    <a href="{% url 'gifts' %}" class="btn btn-outline-darkgree rounded-0 btn-lg me-2">
+                    <a href="{% url 'gifts' %}" class="btn btn-outline-dark rounded btn-lg me-2">
                         <i class="fas fa-chevron-left me-1"></i>
                         <span class="text-uppercase">Keep Shopping</span>
                     </a>
-                    <a href="{% url 'checkout' %}" class="btn btn-outline-darkgree rounded-0 btn-lg">
+                    <a href="{% url 'checkout' %}" class="btn btn-outline-dark rounded btn-lg">
                         <span class="text-uppercase">Secure Checkout</span>
                         <i class="fas fa-lock ms-1"></i>
                     </a>
                 </td>
             </tr>
-        </tbody>
     </table>
+    
 </div>
 {% else %}
 <p class="lead mb-5">Your bag is empty.</p>
@@ -120,12 +129,14 @@
 <script type="text/javascript">
     // Update quantity on click
     $('.update-link').click(function (e) {
-        var form = $(this).prev('.update-form');
+        e.preventDefault();
+        var form = $(this).closest('td').find('.update-form');
         form.submit();
     });
 
     // Remove item and reload on click
     $('.remove-item').click(function (e) {
+        e.preventDefault();
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var size = $(this).data('size');
@@ -137,4 +148,5 @@
             });
     });
 </script>
+
 {% endblock %}
