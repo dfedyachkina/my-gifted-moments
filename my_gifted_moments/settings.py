@@ -38,6 +38,7 @@ ALLOWED_HOSTS = [
     'my-gifted-moments-154948e92f6b.herokuapp.com',
     '8000-dfedyachkin-mygiftedmom-3t7037n063p.ws-eu118.gitpod.io',
     '8080-dfedyachkin-mygiftedmom-3t7037n063p.ws-eu118.gitpod.io',
+    'https://ui.dev/amiresponsive?url=https://my-gifted-moments-154948e92f6b.herokuapp.com',
     ]
 
 
@@ -110,6 +111,8 @@ LOGIN_REDIRECT_URL = '/'
 # CSRF Token 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-dfedyachkin-mygiftedmom-3t7037n063p.ws-eu118.gitpod.io',
+    "https://*.herokuapp.com",
+    "https://ui.dev/*"
 ]
 
 
