@@ -210,6 +210,12 @@ a.category-badge > span.badge:hover {
 
 /* Bag page */
 
+.gift-img-bag {
+    max-height: 350px;
+    object-fit: cover;
+    max-width: 100%;
+}
+
 .btn-outline-darkgreen {
     background: white;
     color: black !important; /* use important to override link colors for <a> elements */
@@ -231,6 +237,17 @@ a.category-badge > span.badge:hover {
 input[name='q']::placeholder {
     color: #aab7c4;
 }
+
+/* Fav buttons */
+
+.favorite-icon {
+    transition: transform 0.2s ease;
+}
+
+.favorite-icon:hover {
+    transform: scale(1.2);
+}
+
 
 /* ------------------------------- bootstrap toasts */
 
@@ -396,6 +413,22 @@ footer .copyright {
 
 
 /* Responsive tweaks */
+@media (max-width: 450px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+    .gift-img-bag {
+        max-width: 100%;
+        height: auto;
+    }
+    .update-form .input-group {
+        flex-wrap: nowrap;
+    }
+    .update-link, .remove-item {
+        font-size: 0.875rem;
+    }
+}
+
 @media (max-width: 768px) {
     .home-banner {
         background-attachment: scroll;
