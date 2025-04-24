@@ -73,3 +73,32 @@ source: [my-gifted-moments amiresponsive](https://ui.dev/amiresponsive?url=https
 13. Users signup to the newsletter → potentially receive advanced notice of upcoming sales.
 14. User get error 404 → when user goes to the path which doesn't exist - he gets the 404 error.
 
+#### 4. Skeleton Plane
+##### Wireframe Suggestions
+- A full list of [Wireframes](#wireframes) can be viewed in detail below.
+
+## Wireframes
+
+To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+
+| Page | Mobile | Tablet | Desktop |
+| --- | --- | --- | --- |
+| Register | ![screenshot](documentation/wireframes/mobile-register.png) | ![screenshot](documentation/wireframes/tablet-register.png) | ![screenshot](documentation/wireframes/desktop-register.png) |
+| Login | ![screenshot](documentation/wireframes/mobile-login.png) | ![screenshot](documentation/wireframes/tablet-login.png) | ![screenshot](documentation/wireframes/desktop-login.png) |
+| Logout | ![screenshot](documentation/wireframes/mobile-logout.png) | ![screenshot](documentation/wireframes/tablet-logout.png) | ![screenshot](documentation/wireframes/desktop-logout.png) |
+| Profile | ![screenshot](documentation/wireframes/mobile-profile.png) | ![screenshot](documentation/wireframes/tablet-profile.png) | ![screenshot](documentation/wireframes/desktop-profile.png) |
+| Home | ![screenshot](documentation/wireframes/mobile-home.png) | ![screenshot](documentation/wireframes/tablet-home.png) | ![screenshot](documentation/wireframes/desktop-home.png) |
+| Gifts | ![screenshot](documentation/wireframes/mobile-gifts.png) | ![screenshot](documentation/wireframes/tablet-gifts.png) | ![screenshot](documentation/wireframes/desktop-gifts.png) |
+| Gift Details | ![screenshot](documentation/wireframes/mobile-gift-details.png) | ![screenshot](documentation/wireframes/tablet-gift-details.png) | ![screenshot](documentation/wireframes/desktop-gift-details.png) |
+| Bag | ![screenshot](documentation/wireframes/mobile-bag.png) | ![screenshot](documentation/wireframes/tablet-bag.png) | ![screenshot](documentation/wireframes/desktop-bag.png) |
+| Checkout | ![screenshot](documentation/wireframes/mobile-checkout.png) | ![screenshot](documentation/wireframes/tablet-checkout.png) | ![screenshot](documentation/wireframes/desktop-checkout.png) |
+| Checkout Success | ![screenshot](documentation/wireframes/mobile-checkout-success.png) | ![screenshot](documentation/wireframes/tablet-checkout-success.png) | ![screenshot](documentation/wireframes/desktop-checkout-success.png) |
+| My favorite list | ![screenshot](documentation/wireframes/mobile-my-favorite-list.png) | ![screenshot](documentation/wireframes/tablet-my-favorite-list.png) | ![screenshot](documentation/wireframes/desktop-my-favorite-list.png) |
+| Add Gift | ![screenshot](documentation/wireframes/mobile-add-gift.png) | ![screenshot](documentation/wireframes/tablet-add-gift.png) | ![screenshot](documentation/wireframes/desktop-add-gift.png) |
+| Edit Gift| ![screenshot](documentation/wireframes/mobile-edit-gift.png) | ![screenshot](documentation/wireframes/tablet-edit-gift.png) | ![screenshot](documentation/wireframes/desktop-edit-gift.png) |
+| Newsletter | ![screenshot](documentation/wireframes/mobile-newsletter.png) | ![screenshot](documentation/wireframes/tablet-newsletter.png) | ![screenshot](documentation/wireframes/desktop-newsletter.png) |
+| Contact | ![screenshot](documentation/wireframes/mobile-contact.png) | ![screenshot](documentation/wireframes/tablet-contact.png) | ![screenshot](documentation/wireframes/desktop-contact.png) |
+| FAQ | ![screenshot](documentation/wireframes/mobile-faq.png) | ![screenshot](documentation/wireframes/tablet-faq.png) | ![screenshot](documentation/wireframes/desktop-fag.png) |
+| 404 | ![screenshot](documentation/wireframes/mobile-404.png) | ![screenshot](documentation/wireframes/tablet-404.png) | ![screenshot](documentation/wireframes/desktop-404.png) |
+
