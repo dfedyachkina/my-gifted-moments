@@ -77,6 +77,31 @@ source: [my-gifted-moments amiresponsive](https://ui.dev/amiresponsive?url=https
 ##### Wireframe Suggestions
 - A full list of [Wireframes](#wireframes) can be viewed in detail below.
 
+#### 5. Surface Plane
+##### Visual Design Elements
+- **[Colours](#colour-scheme)**: see below.
+- **[Typography](#typography)**: see below.
+
+### Colour Scheme
+
+I used [coolors.co](https://coolors.co/080708-3772ff-df2935-fdca40-e6e8e6) to generate my color palette.
+
+- `#333` primary text.
+- `#ffffff` primary highlights.
+- `#555` secondary text.
+- `#555` secondary highlights.
+
+![screenshot](documentation/coolors.png)
+
+### Typography
+
+
+- [Playfair Display](https://fonts.google.com/specimen/PlayfairDisplay) was used for the primary headers and titles.
+- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
+- [Imperial Script](https://fonts.google.com/specimen/ImperialScript) was used for word Moment on home banner.
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+
+
 ## Wireframes
 
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
