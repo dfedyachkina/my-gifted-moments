@@ -11,11 +11,12 @@
 {% endblock %}
 
 {% block content %}
-<div class="col">
+<div>
     <hr>
     <h2 class="logo-font mb-4">Shopping Bag</h2>
     <hr>
 </div>
+
 
 {% if bag_items %}
 <div class="table-responsive rounded h-75">
@@ -79,12 +80,12 @@
                         <a class="remove-item text-danger float-end" id="remove_{{ item.item_id }}"
                             data-size="{{ item.size }}"><small>Remove</small></a>
                     </div>
-            </td>
+                </td>
 
-            <!-- Subtotal -->
-            <td class="py-2 d-block d-sm-table-cell">
-                <p class="mb-1">${{ item.gift.price|calc_subtotal:item.quantity }}</p>
-            </td>
+                <!-- Subtotal -->
+                <td class="py-2 d-block d-sm-table-cell">
+                    <p class="mb-1">${{ item.gift.price|calc_subtotal:item.quantity }}</p>
+                </td>
             </tr>
             {% endfor %}
             <tr>
@@ -94,7 +95,8 @@
                     <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                     {% if free_delivery_delta > 0 %}
                     <p class="mb-1 text-danger">
-                        You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                        You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong>
+                        more!
                     </p>
                     {% endif %}
                 </td>
@@ -112,14 +114,17 @@
                 </td>
             </tr>
     </table>
-    
+
 </div>
 {% else %}
-<p class="lead mb-5">Your bag is empty.</p>
-<a href="{% url 'gifts' %}" class="btn btn-outline-darkgreen rounded-0 btn-lg">
-    <i class="fas fa-chevron-left me-1"></i>
-    <span class="text-uppercase">Keep Shopping</span>
-</a>
+<div class="col text-center">
+    <p class="lead mb-5">Your bag is empty.</p>
+    <a href="{% url 'gifts' %}" class="btn btn-outline-darkgreen rounded-0 btn-lg">
+        <i class="fas fa-chevron-left me-1"></i>
+        <span class="text-uppercase">Keep Shopping</span>
+    </a>
+</div>
+
 {% endif %}
 {% endblock %}
 
