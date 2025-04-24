@@ -11,3 +11,12 @@ source: [my-gifted-moments amiresponsive](https://ui.dev/amiresponsive?url=https
 
 > [!IMPORTANT]
 > The examples in these templates are strongly influenced by the Code Institute walkthrough project called "Boutique Ado".
+## UX
+
+### The 5 Planes of UX
+
+#### 1. Strategy Plane
+##### Purpose
+- Deliver a delightful, stress-free shopping experience tailored for gifting needs.
+- Make it simple for customers to customize gifts and add personal touches (e.g., notes, messages).
+- Enable store admins to efficiently manage product availability, seasonal items, and orders.
