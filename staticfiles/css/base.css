@@ -248,6 +248,10 @@ input[name='q']::placeholder {
     transform: scale(1.2);
 }
 
+.fa-heart {
+    margin-left: 10px !important;
+}
+
 
 /* ------------------------------- bootstrap toasts */
 
