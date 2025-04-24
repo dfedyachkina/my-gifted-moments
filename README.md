@@ -48,3 +48,28 @@ source: [my-gifted-moments amiresponsive](https://ui.dev/amiresponsive?url=https
 - Newsletter contains the form to activate a subscription for sending mails to him. 
 - 404 page for lost users.
 
+#### 3. Structure Plane
+##### Information Architecture
+- **Navigation Menu**:
+  - Links to Home, Gifts, Cart, FAQ, Contact Us, Newsletter and Account sections.
+- **Hierarchy**:
+  - Prominent gift categories and filters for easy navigation.
+  - Cart and checkout options displayed prominently for convenience.
+  - Favorite List and Gift Management options displayed under account section
+
+##### User Flow
+1. Guest user browses the store → filters and sorts products by category, occasion, price, or name.
+2. Guest user adds items to the cart → proceeds to checkout.
+3. Guest user creates an account or logs in during checkout → completes purchase.
+4. Guest user can browse FAQ page → see frequently asked questions and expand answers.
+5. Guest user can browse Contact us page → can fill the form, submit it and receive suceess message.
+6. Returning customers log in → view past orders and track purchase history.
+7. Registred users add items to favorite list → view favorite list, add to favorite list and remove from favorite list.
+8. Site owners manage inventory → add, update, or delete products and categories.
+9. Site owners manage orders → add, change and see orders.
+10. Site owners manage FAQs → can add a new question, edit and delete it.
+11. Site owners manage Contact Us submited forms → receive a mail who jas submitted the form and filled infromation.
+12. Site owners browse subscription → browse, add and delete users who has subsribed to newsletter.
+13. Users signup to the newsletter → potentially receive advanced notice of upcoming sales.
+14. User get error 404 → when user goes to the path which doesn't exist - he gets the 404 error.
+
