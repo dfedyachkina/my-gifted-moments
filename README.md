@@ -416,3 +416,67 @@ Social media plays a key role in building a supportive and enthusiastic communit
 
 The newsletter allows Gifted Moments to stay in touch with its audience by sharing updates on new arrivals, exclusive offers, seasonal specials, store announcements, and upcoming events—keeping customers informed and connected.
 
+## SEO & Marketing
+
+### Keywords
+
+I've identified some appropriate keywords to align with my site, that should help users when searching online to find my page easily from a search engine. This included a series of the following keyword types:
+
+- Short-tail (head terms) keywords
+- Long-tail keywords
+
+I've also played around with [Word Tracker](https://www.wordtracker.com) a bit to check the frequency of some of my site's primary keywords (only until the free trial expired).
+
+### Sitemap
+
+I've used [XML-Sitemaps](https://www.xml-sitemaps.com) to generate a sitemap.xml file. This was generated using my deployed site URL: https://my-gifted-moments-154948e92f6b.herokuapp.com
+
+After it finished crawling the entire site, it created a [sitemap.xml](sitemap.xml), which I've downloaded and included in the repository.
+
+### Robots
+
+I've created the [robots.txt](robots.txt) file at the root-level. Inside, I've included the default settings:
+
+```txt
+User-agent: *
+Disallow:
+Sitemap: https://my-gifted-moments-154948e92f6b.herokuapp.com/sitemap.xml
+```
+
+Further links for future implementation:
+- [Google search console](https://search.google.com/search-console)
+- [Creating and submitting a sitemap](https://developers.google.com/search/docs/advanced/sitemaps/build-sitemap)
+- [Managing your sitemaps and using sitemaps reports](https://support.google.com/webmasters/answer/7451001)
+- [Testing the robots.txt file](https://support.google.com/webmasters/answer/6062598)
+
+### Social Media Marketing
+
+Creating a strong social base (with participation) and linking that to the business site can help drive sales. Using more popular providers with a wider user base, such as Facebook, typically maximizes site views.
+
+I've created a mockup Facebook business account using the [Balsamiq template](https://code-institute-org.github.io/5P-Assessments-Handbook/files/Facebook_Mockups.zip) provided by Code Institute.
+
+![screenshot](documentation/mockup-facebook.png)
+
+### Newsletter Marketing
+
+I have incorporated a newsletter sign-up form on my application, to allow users to supply their email address if they are interested in learning more. 
+
+
+**Custom Django Model Newsletter**
+
+- Create a custom `newsletter` app in your project, with a custom model/class called `Newsletter`.
+- This method satisfies two assessment criteria:
+    1. include a newsletter
+    2. one of your 3 required custom models
+- It doesn't need anything except the `email` field on the model, but feel free to add more if you need.
+- Example: (keep this in your README if you've done this method, attach your `Newsletter` model in a code block like the following example)
+    ```python
+    class Newsletter(models.Model):
+        email = models.EmailField(null=False, blank=False)
+
+        def __str__(self):
+            return self.email
+    ```
+- Consider using the same `send_mail()` functionality used on the `webhook_handler.py` file.
+    - You can trigger an email to be sent out to subscribed users when new products are added to the site!
+
