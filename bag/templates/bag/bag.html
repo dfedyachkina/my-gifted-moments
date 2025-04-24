@@ -21,7 +21,7 @@
 {% if bag_items %}
 <div class="table-responsive rounded h-75">
     <table class="table table-sm table-borderless">
-        <thead class="text-black d-none d-sm-table-header-group">
+        <thead class="text-dark d-none d-sm-table-header-group">
             <tr>
                 <th scope="col">Gift Info</th>
                 <th scope="col"></th>
@@ -59,14 +59,14 @@
                     <form class="update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                         {% csrf_token %}
                         <div class="input-group input-group-sm">
-                            <button class="decrement-qty btn btn-black rounded-0" data-item_id="{{ item.item_id }}"
+                            <button class="decrement-qty btn btn-dark rounded-0" data-item_id="{{ item.item_id }}"
                                 id="decrement-qty_{{ item.item_id }}">
                                 <i class="fas fa-minus fa-sm"></i>
                             </button>
                             <input type="number" name="quantity" class="form-control qty_input text-center"
                                 value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}"
                                 id="id_qty_{{ item.item_id }}">
-                            <button class="increment-qty btn btn-black rounded-0" data-item_id="{{ item.item_id }}"
+                            <button class="increment-qty btn btn-dark rounded-0" data-item_id="{{ item.item_id }}"
                                 id="increment-qty_{{ item.item_id }}">
                                 <i class="fas fa-plus fa-sm"></i>
                             </button>

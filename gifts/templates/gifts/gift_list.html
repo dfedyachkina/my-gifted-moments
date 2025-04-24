@@ -20,7 +20,7 @@
 
                 {% for c in current_categories %}
                     <a href="{% url 'gifts' %}?category={{ c.name }}" class="category-badge text-decoration-none">
-                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">
+                        <span class="p-2 mt-2 badge badge-white text-dark rounded-0 border border-dark">
                             {{ c.friendly_name }}
                         </span>
                     </a>
