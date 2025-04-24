@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'favorites',
+    'newsletter',
 
     # Other
     'crispy_forms',
@@ -76,6 +77,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -83,7 +85,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
 
 ]
 
