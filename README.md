@@ -380,3 +380,39 @@ INSTALLED_APPS = [
 
 source: [medium.com](https://medium.com/@yathomasi1/1-using-django-extensions-to-visualize-the-database-diagram-in-django-application-c5fa7e710e16)
 
+## Agile Development Process
+
+### GitHub Projects
+
+[GitHub Projects](https://www.github.com/dfedyachkina/my-gifted-moments/projects) served as an Agile tool for this project. Through it, EPICs, User Stories, issues/bugs, and Milestone tasks were planned, then subsequently tracked on a regular basis using the Kanban project board.
+
+![screenshot](documentation/gh-projects.png)
+
+### GitHub Issues
+
+[GitHub Issues](https://www.github.com/dfedyachkina/my-gifted-moments/issues) served as an another Agile tool. There, I managed my User Stories and Milestone tasks, and tracked any issues/bugs.
+
+| Link | Screenshot |
+| --- | --- |
+| [![GitHub issues](https://img.shields.io/github/issues/dfedyachkina/my-gifted-moments)](https://www.github.com/dfedyachkina/my-gifted-moments/issues) | ![screenshot](documentation/gh-issues-open.png) |
+| [![GitHub closed issues](https://img.shields.io/github/issues-closed/dfedyachkina/my-gifted-moments)](https://www.github.com/dfedyachkina/my-gifted-moments/issues?q=is%3Aissue+is%3Aclosed) | ![screenshot](documentation/gh-issues-closed.png) |
+
+### MoSCoW Prioritization
+
+I've decomposed my Epics into User Stories for prioritizing and implementing them. Using this approach, I was able to apply "MoSCoW" prioritization and labels to my User Stories within the Issues tab.
+
+- **Must Have**: guaranteed to be delivered - required to Pass the project (*max ~60% of stories*)
+- **Should Have**: adds significant value, but not vital (*~20% of stories*)
+- **Could Have**: has small impact if left out (*the rest ~20% of stories*)
+- **Won't Have**: not a priority for this iteration - future features
+
+## Ecommerce Business Model
+
+Gifted Moments operates on a **Business to Customer (B2C) model**, catering directly to individual customers seeking thoughtful and unique gifts. It follows a straightforward B2C approach—focused on one-time purchases rather than subscriptions—making it easy for customers to find and buy the perfect gift without any long-term commitments.
+
+Although still in the early stages of development, Gifted Moments already features a growing newsletter list and active links to its social media channels, laying the foundation for strong customer engagement.
+
+Social media plays a key role in building a supportive and enthusiastic community around the brand. Platforms like Facebook and Instagram can help increase visibility, connect with loyal customers, and attract new visitors to the site through engaging content and promotions.
+
+The newsletter allows Gifted Moments to stay in touch with its audience by sharing updates on new arrivals, exclusive offers, seasonal specials, store announcements, and upcoming events—keeping customers informed and connected.
+
