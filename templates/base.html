@@ -31,7 +31,6 @@
 
   {% block corejs %}
   <!-- Add your kit code -->
-  <script src="https://kit.fontawesome.com<ADD YOUR KIT CODE HERE>.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -60,7 +59,7 @@
         </a>
       </div>
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-        <form method="GET" action="">
+        <form method="GET" action="{% url 'gifts' %}">
           {% csrf_token %}
           <div class="input-group w-100">
             <input class="form-control border border-black rounded-0" type="text" name="q"
@@ -76,7 +75,7 @@
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
           <li class="list-inline-item dropdown">
-            <a class="text-black nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true"
+            <a class="text-dark nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
               <div class="text-center">
                 <i class="fa-regular fa-user"></i>
@@ -178,7 +177,7 @@
 
   {% block postloadjs %}
 
-  <script type="text/javascript">
+  <script>
     document.addEventListener('DOMContentLoaded', function () {
       var toastElList = document.querySelectorAll('.toast');
       toastElList.forEach(function (toastEl) {
@@ -197,9 +196,9 @@
 
   {% endblock %}
 
-</body>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3296bda619.js" crossorigin="anonymous"></script>
 
-<!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/3296bda619.js" crossorigin="anonymous"></script>
+</body>
 
 </html>
