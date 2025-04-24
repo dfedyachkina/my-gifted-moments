@@ -480,3 +480,9 @@ I have incorporated a newsletter sign-up form on my application, to allow users 
 - Consider using the same `send_mail()` functionality used on the `webhook_handler.py` file.
     - You can trigger an email to be sent out to subscribed users when new products are added to the site!
 
+
+## Testing
+
+> [!NOTE]
+> For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
