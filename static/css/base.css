@@ -508,3 +508,11 @@ footer .copyright {
     }
 
 }
+
+
+@media (min-width: 2000px) {
+    .home-banner {
+        width: 65%;
+        margin: auto;
+    }
+}
