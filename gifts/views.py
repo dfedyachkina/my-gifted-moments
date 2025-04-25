@@ -8,6 +8,7 @@ from .models import Gift, Category, Occasion
 from favorites.models import Favorite
 from .forms import GiftForm
 
+
 def all_gifts(request):
     """ A view to show all gifts, including sorting and search queries """
     gifts = Gift.objects.all()
@@ -33,9 +34,6 @@ def all_gifts(request):
             if direction == 'desc':
                 sortkey = f'-{sortkey}'
         gifts = gifts.order_by(sortkey)
-
-
-
     if 'occasion' in request.GET:
         occasion_names = request.GET['occasion'].split(',')
         gifts = gifts.filter(occasion__name__in=occasion_names)
@@ -45,8 +43,6 @@ def all_gifts(request):
         category_names = request.GET['category'].split(',')
         gifts = gifts.filter(category__name__in=category_names)
         current_categories = Category.objects.filter(name__in=category_names)
-
-
     if 'q' in request.GET:
         query = request.GET['q']
         if not query:
@@ -57,7 +53,6 @@ def all_gifts(request):
         gifts = gifts.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-    
     context = {
         'gifts': gifts,
         'search_term': query,
@@ -69,13 +64,12 @@ def all_gifts(request):
     print("Current sorting:", current_sorting)
 
 
-
 def gift_detail(request, gift_id):
     gift = get_object_or_404(Gift, pk=gift_id)
 
     is_favorited = False
     if request.user.is_authenticated:
-        is_favorited = Favorite.objects.filter(user=request.user, gift=gift).exists()
+        is_favorited = Favorite.objects.filter(user=request.user, gift=gift).exists()  # noqa
 
     context = {
         'gift': gift,
@@ -98,10 +92,9 @@ def add_gift(request):
             messages.success(request, 'Successfully added gift!')
             return redirect(reverse('add_gift'))
         else:
-            messages.error(request, 'Failed to add gift. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add gift. Please ensure the form is valid.')  # noqa
     else:
         form = GiftForm()
-        
     template = 'gifts/add_gift.html'
     context = {
         'form': form,
@@ -152,4 +145,3 @@ def delete_gift(request, gift_id):
     gift.delete()
     messages.success(request, 'Gift deleted!')
     return redirect(reverse('gifts'))
-
