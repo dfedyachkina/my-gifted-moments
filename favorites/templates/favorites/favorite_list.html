@@ -18,7 +18,7 @@
                             <h5 class="card-title">{{ favorite.gift.name }}</h5>
                             <div class="mt-auto d-flex justify-content-between">
                                 <a href="{% url 'gift_detail' favorite.gift.id %}" class="btn btn-outline-dark me-2"> View Gift</a>
-                                <a href="{% url 'remove_from_favorites' favorite.gift.id %}" class="btn btn-outline-danger">
+                                <a href="{% url 'remove_from_favorites' favorite.gift.id %}?next={% url 'favorite_list' %}" class="btn btn-outline-danger">
                                     Remove from Favorites
                                 </a>
                             </div>

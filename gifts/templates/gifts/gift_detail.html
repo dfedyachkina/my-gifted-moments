@@ -100,7 +100,7 @@
                             <input type="submit" value="Add to Bag" class="btn btn-outline-dark rounded text-uppercase mt-5">
                             {% if user.is_authenticated %}
                             {% if is_favorited %}
-                            <a href="{% url 'remove_from_favorites' gift.id %}" class="text-danger mt-5"
+                            <a href="{% url 'remove_from_favorites' gift.id %}?next={{ request.path }}" class="text-danger mt-5"
                                 title="Remove from Favorites">
                                 <i class="fas fa-heart fa-lg"></i>
                             </a>
