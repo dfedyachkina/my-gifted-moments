@@ -38,7 +38,7 @@ ALLOWED_HOSTS = [
     'my-gifted-moments-154948e92f6b.herokuapp.com',
     '8000-dfedyachkin-mygiftedmom-3t7037n063p.ws-eu118.gitpod.io',
     '8080-dfedyachkin-mygiftedmom-3t7037n063p.ws-eu118.gitpod.io',
-    'https://ui.dev/amiresponsive?url=https://my-gifted-moments-154948e92f6b.herokuapp.com',
+    'https://ui.dev/amiresponsive?url=https://my-gifted-moments-154948e92f6b.herokuapp.com',  # noqa
     ]
 
 
@@ -85,7 +85,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    
 
 ]
 
@@ -110,7 +109,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-# CSRF Token 
+# CSRF Token
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-dfedyachkin-mygiftedmom-3t7037n063p.ws-eu118.gitpod.io',
     "https://*.herokuapp.com",
@@ -136,8 +135,8 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
-                'django.contrib.auth.context_processors.auth', 
+                'django.template.context_processors.request',  # required by allauth  # noqa
+                'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'bag.contexts.bag_contents',
@@ -168,19 +167,18 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa
     },
     {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa
     },
     {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa
     },
     {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
@@ -237,7 +235,6 @@ STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'
-
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
@@ -246,4 +243,4 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
-    ADMINS = os.environ.get('ADMINS')
+    ADMINS = ast.literal_eval(os.environ.get('ADMINS', '[]'))
