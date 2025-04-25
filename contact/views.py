@@ -5,6 +5,7 @@ from django.conf import settings
 from .models import Contact
 from .forms import ContactForm
 
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -22,10 +23,10 @@ def contact(request):
             )
             admin_email = 'my.gifted.moments123@gmail.com'
             if admin_email:
-                send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [admin_email])
+                send_mail(subject, message, settings.DEFAULT_FROM_EMAIL, [admin_email])  # noqa
 
             # User feedback
-            messages.success(request, 'Thank you for your message! We will get back to you soon.')
+            messages.success(request, 'Thank you for your message! We will get back to you soon.')  # noqa
             return redirect('contact')
     else:
         form = ContactForm()
