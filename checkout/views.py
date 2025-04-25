@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse  # noqa
 from django.views.decorators.http import require_POST
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
@@ -13,6 +13,7 @@ from profiles.models import UserProfile
 from bag.contexts import bag_contents
 
 import stripe
+
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -46,7 +47,7 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for size, quantity in item_data['items_by_size'].items():  # noqa
                             order_line_item = OrderLineItem(
                                 order=order,
                                 gift=gift,
@@ -56,14 +57,14 @@ def checkout(request):
                             order_line_item.save()
                 except Gift.DoesNotExist:
                     messages.error(request, (
-                        "One of the gifts in your bag wasn't found in our database. "
+                        "One of the gifts in your bag wasn't found in our database. "  # noqa
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse('checkout_success', args=[order.order_number]))  # noqa
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
@@ -71,9 +72,8 @@ def checkout(request):
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(request, "There's nothing in your bag at the moment")  # noqa
             return redirect(reverse('gifts'))
-        
         current_bag = bag_contents(request)
         total = current_bag['grand_total']
         stripe_total = round(total * 100)
@@ -82,7 +82,6 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-        
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -101,8 +100,6 @@ def checkout(request):
                 order_form = OrderForm()
         else:
             order_form = OrderForm()
-
-
         # in the video, the below code is not indented properly
         # this is the correct indentation
         if not stripe_public_key:
@@ -150,7 +147,6 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
-        
     """Send the user a confirmation email"""
     cust_email = order.email
     subject = render_to_string(
@@ -159,14 +155,12 @@ def checkout_success(request, order_number):
     body = render_to_string(
         'checkout/confirmation_emails/confirmation_email_body.txt',
         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
     send_mail(
         subject,
         body,
         settings.DEFAULT_FROM_EMAIL,
         [cust_email]
-    )    
-    
+        )
     if 'bag' in request.session:
         del request.session['bag']
 
