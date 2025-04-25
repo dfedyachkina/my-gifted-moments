@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import ast
 from pathlib import Path
 if os.path.isfile('env.py'):
     import env
