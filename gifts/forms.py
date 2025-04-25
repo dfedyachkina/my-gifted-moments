@@ -9,7 +9,7 @@ class GiftForm(forms.ModelForm):
         model = Gift
         fields = '__all__'
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)  # noqa
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

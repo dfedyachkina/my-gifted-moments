@@ -22,6 +22,6 @@ class SizeAdmin(admin.ModelAdmin):
 
 @admin.register(Gift)
 class GiftAdmin(admin.ModelAdmin):
-    list_display = ('name', 'category', 'occasion', 'size', 'quantity', 'price', 'image')
+    list_display = ('name', 'category', 'occasion', 'size', 'quantity', 'price', 'image')  # noqa
     list_filter = ('category', 'occasion', 'size')
     search_fields = ('name', 'description')
