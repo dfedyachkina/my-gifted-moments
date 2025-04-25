@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from gifts.models import Gift
 
+
 def bag_contents(request):
 
     bag_items = []
@@ -21,7 +22,6 @@ def bag_contents(request):
                 'quantity': item_data,
                 'gift': gift,
             })
-            
         else:
             gift = get_object_or_404(Gift, pk=item_id)
             for size, quantity in item_data['items_by_size'].items():
@@ -40,9 +40,7 @@ def bag_contents(request):
     else:
         delivery = 0
         free_delivery_delta = 0
-    
     grand_total = delivery + total
-    
     context = {
         'bag_items': bag_items,
         'total': total,
