@@ -131,4 +131,28 @@ I've tested my deployed project to check for responsiveness issues.
 | Contact | ![screenshot](documentation/responsiveness/mobile-contact.png) | ![screenshot](documentation/responsiveness/tablet-contact.png) | ![screenshot](documentation/responsiveness/desktop-contact.png) | Works as expected |
 | 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
 
+## Browser Compatibility
+
+I've tested my deployed project on multiple browsers to check for compatibility issues.
+
+| Page | Chrome | Firefox | Safari | Notes |
+| --- | --- | --- | --- | --- |
+| Register | ![screenshot](documentation/browsers/chrome-register.png) | ![screenshot](documentation/browsers/firefox-register.png) | ![screenshot](documentation/browsers/safari-register.png) | Works as expected |
+| Login | ![screenshot](documentation/browsers/chrome-login.png) | ![screenshot](documentation/browsers/firefox-login.png) | ![screenshot](documentation/browsers/safari-login.png) | Works as expected |
+| Logout| ![screenshot](documentation/browsers/chrome-logout.png) | ![screenshot](documentation/browsers/firefox-logout.png) | ![screenshot](documentation/browsers/safari-logout.png) | Works as expected |
+| Profile | ![screenshot](documentation/browsers/chrome-profile.png) | ![screenshot](documentation/browsers/firefox-profile.png) | ![screenshot](documentation/browsers/safari-profile.png) | Works as expected |
+| Home | ![screenshot](documentation/browsers/chrome-home.png) | ![screenshot](documentation/browsers/firefox-home.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
+| Gifts | ![screenshot](documentation/browsers/chrome-gifts.png) | ![screenshot](documentation/browsers/firefox-gifts.png) | ![screenshot](documentation/browsers/safari-gifts.png) | Works as expected |
+| Gift Details | ![screenshot](documentation/browsers/chrome-gift-details.png) | ![screenshot](documentation/browsers/firefox-gift-details.png) | ![screenshot](documentation/browsers/safari-gift-details.png) | Works as expected |
+| Bag | ![screenshot](documentation/browsers/chrome-bag.png) | ![screenshot](documentation/browsers/firefox-bag.png) | ![screenshot](documentation/browsers/safari-bag.png) | Works as expected |
+| Checkout | ![screenshot](documentation/browsers/chrome-checkout.png) | ![screenshot](documentation/browsers/firefox-checkout.png) | ![screenshot](documentation/browsers/safari-checkout.png) | Works as expected |
+| Checkout Success | ![screenshot](documentation/browsers/chrome-checkout-success.png) | ![screenshot](documentation/browsers/firefox-checkout-success.png) | ![screenshot](documentation/browsers/safari-checkout-success.png) | Works as expected |
+| Favorite List | ![screenshot](documentation/browsers/chrome-favorite-list.png) | ![screenshot](documentation/browsers/firefox-favorite-list.png) | ![screenshot](documentation/browsers/safari-favorite-list.png) | Works as expected |
+| Add Gift| ![screenshot](documentation/browsers/chrome-add-gift.png) | ![screenshot](documentation/browsers/firefox-add-gift.png) | ![screenshot](documentation/browsers/safari-add-gift.png) | Works as expected |
+| Edit Gift| ![screenshot](documentation/browsers/chrome-edit-gift.png) | ![screenshot](documentation/browsers/firefox-edit-gift.png) | ![screenshot](documentation/browsers/safari-edit-gift.png) | Works as expected |
+| Newsletter | ![screenshot](documentation/browsers/chrome-newsletter.png) | ![screenshot](documentation/browsers/firefox-newsletter.png) | ![screenshot](documentation/browsers/safari-newsletter.png) | Works as expected |
+| FAQ| ![screenshot](documentation/browsers/chrome-faq.png) | ![screenshot](documentation/browsers/firefox-faq.png) | ![screenshot](documentation/browsers/safari-faq.png) | Works as expected |
+| Contact | ![screenshot](documentation/browsers/chrome-contact.png) | ![screenshot](documentation/browsers/firefox-contact.png) | ![screenshot](documentation/browsers/safari-contact.png) | Works as expected |
+| 404 | ![screenshot](documentation/browsers/chrome-404.png) | ![screenshot](documentation/browsers/firefox-404.png) | ![screenshot](documentation/browsers/safari-404.png) | Works as expected |
+
 
