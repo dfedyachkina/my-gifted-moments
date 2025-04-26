@@ -213,4 +213,38 @@ Defensive programming was manually tested with the below user acceptance testing
 | FAQ | Feature is expected to allow users to browse FAQ and expand answers | Went FAQ page and expand one of the questions | Answers have been displayed successfully | ![screenshot](documentation/defensive/faq.png) |
 | 404 Error Page | Feature is expected to display a 404 error page for non-existent pages. | Navigated to an invalid URL (e.g., `/test`). | A custom 404 error page was displayed as expected. | ![screenshot](documentation/defensive/404.png) |
 
+## User Story Testing
+
+| Target | Expectation | Outcome | Screenshot |
+| --- | --- | --- | --- |
+| As a guest user | I would like to browse gifts without needing to register | so that I can shop freely before deciding to create an account. | ![screenshot](documentation/features/feature01.png) |
+| As a guest user | I would like to be prompted to create an account or log in at checkout | so that I can complete my purchase and track my order history. | ![screenshot](documentation/features/feature02.png) |
+| As a guest user | I would like to browse FAQ page | so that I can find an answer to my question and get know more about store. | ![screenshot](documentation/features/feature03.png) |
+| As a guest user | I would like to browse Contact Us page | so that I can fill the form and submit in case if I have a question or I want to be contacted by the store employee regarding my query. | ![screenshot](documentation/features/feature04.png) |
+| As a user | I would like to sign up to the site's newsletter | so that I can stay up to date with any upcoming sales or promotions. | ![screenshot](documentation/features/feature05.png) |
+| As a customer | I would like to browse various gift categories | so that I can easily find what I'm looking for. | ![screenshot](documentation/features/feature06.png) |
+| As a customer | I would like to sort gifts by price (low-to-high/high-to-low) and name (alphabetical) | so that I can quickly organize items in a way that suits my shopping style. | ![screenshot](documentation/features/feature07.png) |
+| As a customer | I would like to filter gifts by category | so that I can narrow down the gifts to the types I am most interested in. | ![screenshot](documentation/features/feature08.png) |
+| As a customer | I would like to click on individual gifts to view more details (description, price, image, etc.) | so that I can make an informed decision about my purchase. | ![screenshot](documentation/features/feature09.png) |
+| As a customer | I would like to add items to my shopping cart using quantity increment/decrement buttons | so that I can adjust how many units of a gift I want before checkout. | ![screenshot](documentation/features/feature10.png) |
+| As a customer | I would like to view and manage my shopping cart | so that I can review, add, or remove items before proceeding to checkout. | ![screenshot](documentation/features/feature11.png) |
+| As a customer | I would like to adjust the quantity of items in my cart | so that I can modify my purchase preferences without leaving the cart. | ![screenshot](documentation/features/feature12.png) |
+| As a customer | I would like to remove items from my cart | so that I can remove products I no longer wish to buy. | ![screenshot](documentation/features/feature13.png) |
+| As a customer | I would like to proceed to checkout where I see my cart items, grand total, and input my name, email, shipping address, and card details | so that I can complete my purchase. | ![screenshot](documentation/features/feature14.png) |
+| As a customer | I would like to receive a confirmation email after my purchase | so that I can have a record of my transaction and order details. | ![screenshot](documentation/features/feature15.png) |
+| As a customer | I would like to see an order confirmation page with a checkout order number after completing my purchase | so that I know my order has been successfully placed. | ![screenshot](documentation/features/feature16.png) |
+| As a customer | I would like to securely enter my card details using Stripe at checkout | so that I can feel confident my payment information is protected. | ![screenshot](documentation/features/feature17.png) |
+| As a customer | I would like to add items to favorite list | so that I can make back to them if I would like to purchase them later. | ![screenshot](documentation/features/feature18.png) |
+| As a customer | I would like to remove items from favorite list | so that I can modify my favorite list and keep items which I'm intersted in. | ![screenshot](documentation/features/feature19.png) |
+| As a returning customer | I would like to be able to log in and view my past orders | so that I can track my previous purchases and order history. | ![screenshot](documentation/features/feature20.png) |
+| As a returning customer | I would like the checkout process to remember my shipping address | so that future purchases are quicker and easier. | ![screenshot](documentation/features/feature21.png) |
+| As a site owner | I would like to create new gifts with a name, description, price, images, and category | so that I can add additional items to the store inventory. | ![screenshot](documentation/features/feature22.png) |
+| As a site owner | I would like to update gift details (name, price, description, image, category) at any time | so that I can keep my gift listings accurate and up to date. | ![screenshot](documentation/features/feature23.png) |
+| As a site owner | I would like to delete gifts that are no longer available or relevant | so that I can maintain a clean and accurate inventory. | ![screenshot](documentation/features/feature24.png) |
+| As a site owner | I would like to view all orders placed on the website | so that I can track and manage customer purchases. | ![screenshot](documentation/features/feature25.png) |
+| As a site owner | I would like to manage gift categories | so that I can ensure items are correctly organized and easy for customers to find. | ![screenshot](documentation/features/feature26.png) |
+| As a site owner | I would like to manage frequntly asked questions| so that I can keep questions are updated and add new questions which customers ask often | ![screenshot](documentation/features/feature27.png) |
+| As a site owner | I would like to manage contact forms and receive them on my email | so that I can see which person want to be contacted and what's his question, it would decrease waiting time and allow me to reply as soon as possible  | ![screenshot](documentation/features/feature28.png) |
+| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features/feature29.png) |
+
 
