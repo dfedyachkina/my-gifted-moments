@@ -132,7 +132,7 @@ I used [coolors.co](https://coolors.co/080708-3772ff-df2935-fdca40-e6e8e6) to ge
 | As a site owner | I would like to view all orders placed on the website | so that I can track and manage customer purchases. |
 | As a site owner | I would like to manage product categories | so that I can ensure items are correctly organized and easy for customers to find. |
 | As a site owner | I would like to manage product occasions | so that I can add more ocassions at the time of celebration of big events such as Christmas, Easter etc. |
-| As a site owner | I would like to manage frequntle asked questions| so that I can keep questions are updated and add new questions which customers ask often
+| As a site owner | I would like to manage frequently asked questions| so that I can keep questions are updated and add new questions which customers ask often
 | As a site owner | I would like to manage contact forms and receive them on my email | so that I can see which person want to be contacted and what's his question, it would decrease waiting time and allow me to reply as soon as possible  |
 | As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. |
 
