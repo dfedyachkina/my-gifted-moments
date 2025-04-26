@@ -107,4 +107,28 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | profiles | [views.py](https://github.com/dfedyachkina/my-gifted-moments/blob/main/profiles/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/dfedyachkina/my-gifted-moments/main/profiles/views.py) | ![screenshot](documentation/validation/py-profiles-views.png) | Notes (if applicable) |
 
 
+## Responsiveness
+
+I've tested my deployed project to check for responsiveness issues.
+
+| Page | Mobile | Tablet | Desktop | Notes |
+| --- | --- | --- | --- | --- |
+| Register | ![screenshot](documentation/responsiveness/mobile-register.png) | ![screenshot](documentation/responsiveness/tablet-register.png) | ![screenshot](documentation/responsiveness/desktop-register.png) | Works as expected |
+| Login | ![screenshot](documentation/responsiveness/mobile-login.png) | ![screenshot](documentation/responsiveness/tablet-login.png) | ![screenshot](documentation/responsiveness/desktop-login.png) | Works as expected |
+| Logout | ![screenshot](documentation/responsiveness/mobile-logout.png) | ![screenshot](documentation/responsiveness/tablet-logout.png) | ![screenshot](documentation/responsiveness/desktop-logout.png) | Works as expected |
+| Profile | ![screenshot](documentation/responsiveness/mobile-profile.png) | ![screenshot](documentation/responsiveness/tablet-profile.png) | ![screenshot](documentation/responsiveness/desktop-profile.png) | Works as expected |
+| Home | ![screenshot](documentation/responsiveness/mobile-home.png) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/responsiveness/desktop-home.png) | Works as expected |
+| Gifts | ![screenshot](documentation/responsiveness/mobile-gifts.png) | ![screenshot](documentation/responsiveness/tablet-gifts.png) | ![screenshot](documentation/responsiveness/desktop-gifts.png) | Works as expected |
+| Gift Details | ![screenshot](documentation/responsiveness/mobile-gift-details.png) | ![screenshot](documentation/responsiveness/tablet-gift-details.png) | ![screenshot](documentation/responsiveness/desktop-gift-details.png) | Works as expected |
+| Bag | ![screenshot](documentation/responsiveness/mobile-bag.png) | ![screenshot](documentation/responsiveness/tablet-bag.png) | ![screenshot](documentation/responsiveness/desktop-bag.png) | Works as expected |
+| Checkout | ![screenshot](documentation/responsiveness/mobile-checkout.png) | ![screenshot](documentation/responsiveness/tablet-checkout.png) | ![screenshot](documentation/responsiveness/desktop-checkout.png) | Works as expected |
+| Checkout Success | ![screenshot](documentation/responsiveness/mobile-checkout-success.png) | ![screenshot](documentation/responsiveness/tablet-checkout-success.png) | ![screenshot](documentation/responsiveness/desktop-checkout-success.png) | Works as expected |
+| Favorite List | ![screenshot](documentation/responsiveness/mobile-favorite-list.png) | ![screenshot](documentation/responsiveness/tablet-favorite-list.png) | ![screenshot](documentation/responsiveness/desktop-favorite-list.png) | Works as expected |
+| Add Gift | ![screenshot](documentation/responsiveness/mobile-add-gift.png) | ![screenshot](documentation/responsiveness/tablet-add-gift.png) | ![screenshot](documentation/responsiveness/desktop-add-gift.png) | Works as expected |
+| Edit Gift | ![screenshot](documentation/responsiveness/mobile-edit-gift.png) | ![screenshot](documentation/responsiveness/tablet-edit-gift.png) | ![screenshot](documentation/responsiveness/desktop-edit-gift.png) | Works as expected |
+| Newsletter | ![screenshot](documentation/responsiveness/mobile-newsletter.png) | ![screenshot](documentation/responsiveness/tablet-newsletter.png) | ![screenshot](documentation/responsiveness/desktop-newsletter.png) | Works as expected |
+| FAQ | ![screenshot](documentation/responsiveness/mobile-faq.png) | ![screenshot](documentation/responsiveness/tablet-faq.png) | ![screenshot](documentation/responsiveness/desktop-faq.png) | Works as expected |
+| Contact | ![screenshot](documentation/responsiveness/mobile-contact.png) | ![screenshot](documentation/responsiveness/tablet-contact.png) | ![screenshot](documentation/responsiveness/desktop-contact.png) | Works as expected |
+| 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
+
 
