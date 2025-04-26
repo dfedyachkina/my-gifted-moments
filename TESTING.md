@@ -247,4 +247,134 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a site owner | I would like to manage contact forms and receive them on my email | so that I can see which person want to be contacted and what's his question, it would decrease waiting time and allow me to reply as soon as possible  | ![screenshot](documentation/features/feature28.png) |
 | As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features/feature29.png) |
 
+## Automated Testing
+
+I have conducted a series of automated tests on my application.
+
+> [!NOTE]
+> I fully acknowledge and understand that, in a real-world scenario, an extensive set of additional tests would be more comprehensive.
+
+### JavaScript (Jest Testing)
+
+I have used the [Jest](https://jestjs.io) JavaScript testing framework to test the application functionality. In order to work with Jest, I first had to initialize NPM.
+
+- `npm init`
+- Hit `<enter>` for all options, except for **test command:**, just type `jest`.
+
+Add Jest to a list called **Dev Dependencies** in a dev environment:
+
+- `npm install --save-dev jest`
+
+**IMPORTANT**: Initial configurations
+
+When creating test files, the name of the file needs to be `my_gifted_moments.test.js` in order for Jest to properly work. Without the following, Jest won't properly run the tests:
+
+- `npm install -D jest-environment-jsdom`
+
+Due to a change in Jest's default configuration, you'll need to add the following code to the top of the `.test.js` file:
+
+```js
+/**
+ * @jest-environment jsdom
+ */
+const $ = require('jquery');
+global.$ = $;
+
+const { initStripeElements } = require("../static/checkout/js/stripe_elements");
+
+beforeEach(() => {
+  document.body.innerHTML = `
+    <div id="id_stripe_public_key">"pk_test_123"</div>
+    <div id="id_client_secret">"cs_test_456"</div>
+    <div id="card-element"></div>
+    <div id="card-errors"></div>
+    <form id="payment-form"></form>
+    <div id="loading-overlay"></div>
+    <button id="submit-button"></button>
+  `;
+});
+
+test("initializes Stripe Elements without crashing", async () => {
+  const mockStripe = {
+    elements: jest.fn(() => ({
+      create: jest.fn(() => ({
+        mount: jest.fn(),
+        update: jest.fn(),
+        addEventListener: jest.fn(),
+      })),
+    })),
+    confirmCardPayment: jest.fn(() =>
+      Promise.resolve({ paymentIntent: { status: "succeeded" } })
+    ),
+  };
+
+  global.Stripe = jest.fn(() => mockStripe);
+
+  const formSubmit = jest.fn();
+  document.getElementById("payment-form").submit = formSubmit;
+
+  initStripeElements();
+
+  // Simulate form submit
+  document.getElementById("payment-form").dispatchEvent(new Event("submit"));
+
+  await new Promise(resolve => setTimeout(resolve, 0));
+
+
+  expect(formSubmit).toHaveBeenCalled();
+});
+```
+
+Remember to adjust the `fs.readFileSync()` to the specific file you'd like you test. The example above is testing the `index.html` file.
+
+Finally, at the bottom of the script file where your primary scripts are written, include the following at the very bottom of the file. Make sure to include the name of all of your functions that are being tested in the `.test.js` file.
+
+```js
+if (typeof module !== "undefined") module.exports = {
+    function1, function2, function3, etc.
+};
+```
+
+Now that these steps have been undertaken, further tests can be written, and be expected to fail initially. Write JS code that can get the tests to pass as part of the Red-Green refactor process. Once ready, to run the tests, use this command:
+
+- `npm test`
+
+**NOTE**: To obtain a coverage report, use the following command:
+
+- `npm test --coverage`
+
+Below are the results from the tests that I've written for this application:
+
+| Test Suites | Tests | Screenshot |
+| --- | --- | --- |
+| 1 passed | 1 passed | ![screenshot](documentation/automation/jest-coverage.png) |
+
+#### Jest Test Issues
+
+
+### Python (Unit Testing)
+
+I have used Django's built-in unit testing framework to test the application functionality. In order to run the tests, I ran the following command in the terminal each time:
+
+- `python3 manage.py test name-of-app`
+
+To create the coverage report, I would then run the following commands:
+
+- `pip3 install coverage`
+- `pip3 freeze --local > requirements.txt`
+- `coverage run --omit=*/site-packages/*,*/migrations/*,*/__init__.py,env.py,manage.py test`
+- `coverage report`
+
+To see the HTML version of the reports, and find out whether some pieces of code were missing, I ran the following commands:
+
+- `coverage html`
+- `python3 -m http.server`
+
+Below are the results from the full coverage report on my application that I've tested:
+
+![screenshot](documentation/automation/html-coverage.png)
+
+#### Unit Test Issues
+
+
 
