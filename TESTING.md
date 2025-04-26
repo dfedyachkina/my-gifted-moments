@@ -36,4 +36,14 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 | static | [base.css](https://github.com/dfedyachkina/my-gifted-moments/blob/main/static/css/base.css) | https://jigsaw.w3.org/css-validator/validator?uri=https://my-gifted-moments-154948e92f6b.herokuapp.com | ![screenshot](documentation/validation/css-static-base.png) | Notes (if applicable) |
 
 
+### JavaScript
+
+I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
+
+| Directory | File | URL | Screenshot | Notes |
+| --- | --- | --- | --- | --- |
+| checkout | [stripe_elements.js](https://github.com/dfedyachkina/my-gifted-moments/blob/main/checkout/static/checkout/js/stripe_elements.js) | N/A | ![screenshot](documentation/validation/js-checkout-stripe_elements.png) | Notes (if applicable) |
+| profiles | [countryfield.js](https://github.com/dfedyachkina/my-gifted-moments/blob/main/profiles/static/profiles/js/countryfield.js) | N/A | ![screenshot](documentation/validation/js-profiles-countryfield.png) | Notes (if applicable) |
+
+
 
