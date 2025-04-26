@@ -179,4 +179,38 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Contact | ![screenshot](documentation/lighthouse/mobile-contact.png) | ![screenshot](documentation/lighthouse/desktop-contact.png) |
 | 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
 
+## Defensive Programming
+
+Defensive programming was manually tested with the below user acceptance testing:
+
+| Page | Expectation | Test | Result | Screenshot |
+| --- | --- | --- | --- | --- |
+| Home| Feature is expected to allow users to browse home page. | Opened home as a guest user. | Home page was displayed succesfully. | ![screenshot](documentation/defensive/home.png) |
+| Gifts | Feature is expected to allow users to browse gifts without registration. | Opened gift pages as a guest user. | Gifts were fully accessible without requiring registration. | ![screenshot](documentation/defensive/gifts.png) |
+| | Feature is expected to sort gift by price and name. | Tested sorting options for price (low-to-high/high-to-low) and name (alphabetical). | Sorting worked correctly for all options. | ![screenshot](documentation/defensive/sorting.png) |
+| | Feature is expected to filter gifts by category. | Applied category filters while browsing products. | Filters worked as expected, displaying only relevant products. | ![screenshot](documentation/defensive/filtering-category.png) |
+| | Feature is expected to filter gifts by occasion. | Applied occasion filters while browsing products. | Filters worked as expected, displaying only relevant products. | ![screenshot](documentation/defensive/filtering-occasion.png) |
+| | Feature is expected to show detailed gift information. | Clicked on individual gifts to view details. | Gift details (description, price, image) were displayed correctly. | ![screenshot](documentation/defensive/giftt-details.png) |
+| | Feature is expected to show serached items. | Go to search field and serah for an item. | Search page displayed correct items which were searched. | ![screenshot](documentation/defensive/search.png) |
+| Favorite List | Feature is expected to allow registred users to add items to the wishlist. | Added gifts to the favorite list. | Items were added successfully. | ![screenshot](documentation/defensive/add-to-favorite-list.png) |
+| | Feature is expected to allow registred users to view and manage their favorite list. | Opened the favorite list page and edited favorite items there. | Favorite list contents were displayed, updated, and removed correctly. | ![screenshot](documentation/defensive/manage-favorite-list.png) |
+| Shopping Cart | Feature is expected to allow customers to add items to the cart with quantity controls. | Added gifts to the cart and adjusted quantities. | Items were added successfully, and quantities updated as expected. | ![screenshot](documentation/defensive/add-to-cart.png) |
+| | Feature is expected to allow customers to view and manage their cart. | Opened the cart page and edited cart contents. | Cart contents were displayed, updated, and removed correctly. | ![screenshot](documentation/defensive/manage-cart.png) |
+| Checkout | Feature is expected to display cart items, grand total, and input fields for checkout. | Proceeded to checkout with items in the cart. | Checkout page displayed cart items, total, and input fields as expected. | ![screenshot](documentation/defensive/checkout.png) |
+| | Feature is expected to allow secure payment via Stripe. | Entered valid card details using Stripe at checkout. | Payment was processed securely, and an order confirmation page was displayed. | ![screenshot](documentation/defensive/stripe-payment.png) |
+| | Feature is expected to send a confirmation email after purchase. | Completed a purchase and checked email inbox. | Confirmation email was received with order details. | ![screenshot](documentation/defensive/confirmation-email.png) |
+| | Feature is expected to display an order confirmation page with an order number. | Completed a purchase. | Order confirmation page displayed successfully with an order number. | ![screenshot](documentation/defensive/order-confirmation.png) |
+| Account Management | Feature is expected to allow returning customers to log in and view past orders. | Logged in as a returning customer and accessed order history. | Past orders were displayed correctly in the account section. | ![screenshot](documentation/defensive/order-history.png) |
+| | Feature is expected to remember the shipping address for returning customers. | Completed multiple checkouts as a returning customer. | Shipping address was pre-filled on subsequent purchases. | ![screenshot](documentation/defensive/saved-address.png) |
+| Admin Features | Feature is expected to allow the site owner to create new gifts. | Created new gifts with valid data (name, price, description, image, category). | Gift were added successfully and displayed on the site. | ![screenshot](documentation/defensive/create-gift.png) |
+| | Feature is expected to allow the site owner to update gift details. | Edited gift details as an admin user. | Gift updates were saved and displayed correctly. | ![screenshot](documentation/defensive/update-gift.png) |
+| | Feature is expected to allow the site owner to delete gifts. | Deleted a gift from the inventory. | Gift was removed successfully from the site, after being prompted to confirm first. | ![screenshot](documentation/defensive/delete-gift.png) |
+| | Feature is expected to allow the site owner to receive a mail who has submitted contact form. | Submitted contact form. | Email has been received. | ![screenshot](documentation/defensive/contact-mail.png) |
+| | Feature is expected to allow the site owner to manage FAQ from Django Admin dashboard | Went to Django Admin dashboeard and add a new question. | Email has been received. | ![screenshot](documentation/defensive/faq-manage.png) |
+| Orders | Feature is expected to allow the site owner to view all orders placed. | Accessed the orders dashboard as an admin user. | All orders were displayed correctly. | ![screenshot](documentation/defensive/view-orders.png) |
+| Newsletter | Feature is expected to allow users to sign up for the newsletter. | Submitted valid email addresses for newsletter registration. | Email addresses were successfully added to the newsletter list. | ![screenshot](documentation/defensive/newsletter.png) |
+| Contact | Feature is expected to allow users to submit Contact Us form. | Submitted Contact Us form | The form has been submitted successfully | ![screenshot](documentation/defensive/contact.png) |
+| FAQ | Feature is expected to allow users to browse FAQ and expand answers | Went FAQ page and expand one of the questions | Answers have been displayed successfully | ![screenshot](documentation/defensive/faq.png) |
+| 404 Error Page | Feature is expected to display a 404 error page for non-existent pages. | Navigated to an invalid URL (e.g., `/test`). | A custom 404 error page was displayed as expected. | ![screenshot](documentation/defensive/404.png) |
+
 
