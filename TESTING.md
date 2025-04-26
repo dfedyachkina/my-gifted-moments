@@ -155,4 +155,28 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Contact | ![screenshot](documentation/browsers/chrome-contact.png) | ![screenshot](documentation/browsers/firefox-contact.png) | ![screenshot](documentation/browsers/safari-contact.png) | Works as expected |
 | 404 | ![screenshot](documentation/browsers/chrome-404.png) | ![screenshot](documentation/browsers/firefox-404.png) | ![screenshot](documentation/browsers/safari-404.png) | Works as expected |
 
+## Lighthouse Audit
+
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues. Some warnings are outside of my control, and mobile results tend to be lower than desktop.
+
+| Page | Mobile | Desktop |
+| --- | --- | --- |
+| Register | ![screenshot](documentation/lighthouse/mobile-register.png) | ![screenshot](documentation/lighthouse/desktop-register.png) |
+| Login | ![screenshot](documentation/lighthouse/mobile-login.png) | ![screenshot](documentation/lighthouse/desktop-login.png) |
+| Logout | ![screenshot](documentation/lighthouse/mobile-logout.png) | ![screenshot](documentation/lighthouse/desktop-logout.png) |
+| Profile | ![screenshot](documentation/lighthouse/mobile-profile.png) | ![screenshot](documentation/lighthouse/desktop-profile.png) |
+| Home | ![screenshot](documentation/lighthouse/mobile-home.png) | ![screenshot](documentation/lighthouse/desktop-home.png) |
+| Gifts | ![screenshot](documentation/lighthouse/mobile-gifts.png) | ![screenshot](documentation/lighthouse/desktop-gifts.png) |
+| Gift Details | ![screenshot](documentation/lighthouse/mobile-gift-details.png) | ![screenshot](documentation/lighthouse/desktop-gift-details.png) |
+| Bag | ![screenshot](documentation/lighthouse/mobile-bag.png) | ![screenshot](documentation/lighthouse/desktop-bag.png) |
+| Checkout | ![screenshot](documentation/lighthouse/mobile-checkout.png) | ![screenshot](documentation/lighthouse/desktop-checkout.png) |
+| Checkout Success | ![screenshot](documentation/lighthouse/mobile-checkout-success.png) | ![screenshot](documentation/lighthouse/desktop-checkout-success.png) |
+| Favorite list| ![screenshot](documentation/lighthouse/mobile-favorite-list.png) | ![screenshot](documentation/lighthouse/desktop-favorite-list.png) |
+| Add Gift| ![screenshot](documentation/lighthouse/mobile-add-gift.png) | ![screenshot](documentation/lighthouse/desktop-add-gift.png) |
+| Edit Gift | ![screenshot](documentation/lighthouse/mobile-edit-gift.png) | ![screenshot](documentation/lighthouse/desktop-edit-gift.png) |
+| Newsletter | ![screenshot](documentation/lighthouse/mobile-newsletter.png) | ![screenshot](documentation/lighthouse/desktop-newsletter.png) |
+| FAQ | ![screenshot](documentation/lighthouse/mobile-faq.png) | ![screenshot](documentation/lighthouse/desktop-faq.png) |
+| Contact | ![screenshot](documentation/lighthouse/mobile-contact.png) | ![screenshot](documentation/lighthouse/desktop-contact.png) |
+| 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
+
 
