@@ -377,4 +377,33 @@ Below are the results from the full coverage report on my application that I've 
 #### Unit Test Issues
 
 
+## Bugs
+
+### Fixed Bugs
+
+[![GitHub issue custom search](https://img.shields.io/github/issues-search?query=repo%3Adfedyachkina%2Fmy-gifted-moments%20label%3Abug&label=bugs)](https://www.github.com/dfedyachkina/my-gifted-moments/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
+
+I've used [GitHub Issues](https://www.github.com/dfedyachkina/my-gifted-moments/issues) to track and manage bugs and issues during the development stages of my project.
+
+All previously closed/fixed bugs can be tracked [here](https://www.github.com/dfedyachkina/my-gifted-moments/issues?q=is%3Aissue+is%3Aclosed+label%3Abug).
+
+![screenshot](documentation/bugs/gh-issues-closed.png)
+
+### Unfixed Bugs
+
+
+[![GitHub issues](https://img.shields.io/github/issues/dfedyachkina/my-gifted-moments)](https://www.github.com/dfedyachkina/my-gifted-moments/issues)
+
+Any remaining open issues can be tracked [here](https://www.github.com/dfedyachkina/my-gifted-moments/issues).
+
+![screenshot](documentation/bugs/gh-issues-open.png)
+
+### Known Issues
+
+| Issue | Screenshot |
+| --- | --- |
+| The checkout doesn't work on local deployment because of email settings| ![screenshot](documentation/issues/checkout.png) |
+
+> [!IMPORTANT]
+> There are no remaining bugs that I am aware of, though, even after thorough testing, I cannot rule out the possibility.
 
