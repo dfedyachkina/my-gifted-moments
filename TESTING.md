@@ -25,4 +25,15 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | profiles | [profile.html](https://github.com/dfedyachkina/my-gifted-moments/blob/main/profiles/templates/profiles/profile.html) | Link (if applicable) | ![screenshot](documentation/validation/html-profiles-profile.png) | Notes (if applicable) |
 | templates | [404.html](https://github.com/dfedyachkina/my-gifted-moments/blob/main/templates/errors/404.html) | Link (if applicable) | ![screenshot](documentation/validation/html-templates-404.png) | Notes (if applicable) |
 
+### CSS
+
+I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
+
+| Directory | File | URL | Screenshot | Notes |
+| --- | --- | --- | --- | --- |
+| checkout | [checkout.css](https://github.com/dfedyachkina/my-gifted-moments/blob/main/checkout/static/checkout/css/checkout.css) | Link (if applicable) | ![screenshot](documentation/validation/css-checkout-checkout.png) | Notes (if applicable) |
+| profiles | [profile.css](https://github.com/dfedyachkina/my-gifted-moments/blob/main/profiles/static/profiles/css/profile.css) | Link (if applicable) | ![screenshot](documentation/validation/css-profiles-profile.png) | Notes (if applicable) |
+| static | [base.css](https://github.com/dfedyachkina/my-gifted-moments/blob/main/static/css/base.css) | https://jigsaw.w3.org/css-validator/validator?uri=https://my-gifted-moments-154948e92f6b.herokuapp.com | ![screenshot](documentation/validation/css-static-base.png) | Notes (if applicable) |
+
+
 
