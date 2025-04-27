@@ -3,11 +3,12 @@ from django.contrib import messages
 from .models import Newsletter
 from .forms import NewsletterForm
 
+
 def newsletter(request):
     if request.method == 'POST':
         form = NewsletterForm(request.POST)
         if form.is_valid():
-            newsletter= form.save()
+            newsletter = form.save()
 
             # User feedback
             messages.success(request, 'Thank you for subscription!')
