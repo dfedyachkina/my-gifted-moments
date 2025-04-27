@@ -171,7 +171,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | Login | Authentication is handled by allauth, allowing users to log in to their existing accounts. | ![screenshot](documentation/features/login.png) |
 | Logout | Authentication is handled by allauth, allowing users to log out of their accounts. | ![screenshot](documentation/features/logout.png) |
 | Home | Home page shows a banner and link to shop. | ![screenshot](documentation/features/home.png) |
-| Gift List | Users can browse all available products with sorting, filtering by categories, and search functionality. | ![screenshot](documentation/features/gift-list.png) |
+| Gift List | Users can browse all available products with sorting, filtering by categories, and search functionality. | ![screenshot](documentation/features/gifts.png) |
 | Gift Details | Displays detailed information about a selected product, including its name, description, price, an image, and available sizes. | ![screenshot](documentation/features/gift-details.png) |
 | Add to Bag | Users can add items to their shopping bag, with support for selecting different sizes if applicable. | ![screenshot](documentation/features/add-to-bag.png) |
 | View Bag | Users can view the contents of their shopping bag, adjust quantities, or remove items. | ![screenshot](documentation/features/bag.png) |
@@ -192,14 +192,14 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ### Future Features
 
-- **Guft Reviews & Ratings**: Allow customers to leave reviews and rate products, with admin moderation. Display average ratings and review counts on product pages.
+- **Gift Reviews & Ratings**: Allow customers to leave reviews and rate products, with admin moderation. Display average ratings and review counts on product pages.
 - **Discount Codes and Vouchers**: Allow the admin to create discount codes or vouchers for promotions and marketing campaigns.
 - **Loyalty Program**: Introduce a points-based loyalty system where customers earn points for purchases, which can be redeemed for discounts.
 - **Multi-Currency and Multi-Language Support**: Expand the application to support multiple currencies and languages to reach a global audience.
 - **Product Bundles**: Offer discounted product bundles (e.g., buy 3 for the price of 2) or custom product kits.
 - **Social Media Integration**: Enable users to share products directly to social media platforms or implement a social login for quick account creation.
 - **Shipping Tracking Integration**: Provide real-time shipping updates and tracking information directly within the user’s order history.
-- **Advanced Analytics Dashboard for Admin**: Offer an in-depth dashboard that displays sales trends, popular products, customer behavior, and more.
+- **Advanced Analytics Dashboard for Admin**: Offer an in-depth dashboard that displays sales trends, popular gifts, customer behavior, and more.
 - **Mobile App**: Develop a mobile app for iOS and Android, providing users with a more optimized shopping experience on mobile devices.
 
 ## Tools & Technologies
@@ -505,17 +505,15 @@ Deployment steps are as follows, after account setup:
 
 | Key | Value |
 | --- | --- |
-| `AWS_ACCESS_KEY_ID` | user-inserts-own-aws-access-key-id |
-| `AWS_SECRET_ACCESS_KEY` | user-inserts-own-aws-secret-access-key |
+| `ADMINS` | user-inserts-admins |
 | `DATABASE_URL` | user-inserts-own-postgres-database-url |
-| `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
+| `DEBUG` | False |
+| `DEFAULT_FROM_EMAIL` | user-inserts-store-email|
 | `EMAIL_HOST_PASS` | user-inserts-own-gmail-api-key |
 | `EMAIL_HOST_USER` | user-inserts-own-gmail-email-address |
 | `SECRET_KEY` | any-random-secret-key |
 | `STRIPE_PUBLIC_KEY` | user-inserts-own-stripe-public-key |
 | `STRIPE_SECRET_KEY` | user-inserts-own-stripe-secret-key |
-| `STRIPE_WH_SECRET` | user-inserts-own-stripe-webhook-secret |
-| `USE_AWS` | True |
 
 Heroku needs some additional files in order to deploy properly.
 
