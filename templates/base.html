@@ -10,8 +10,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Buy a gift for your beloved person and we will deliver it for you">
-  <meta name="keywords"
-    content="gift, gifts, flowers, bouqets, chocolate box, flower and chocolate box, 
+  <meta name="keywords" content="gift, gifts, flowers, bouqets, chocolate box, flower and chocolate box, 
     wedding gift, bridal party, birthday, balloons, baby shower, gift cards, filled gift box, 
     last minute gift, flowers delivery in Ireland, flowers delivery, gift delivery, dublin">
   {% endblock %}
@@ -33,6 +32,8 @@
   <!-- Add your kit code -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3296bda619.js" crossorigin="anonymous"></script>
 
 
   <!-- Stripe -->
@@ -62,8 +63,7 @@
         <form method="GET" action="{% url 'gifts' %}">
           {% csrf_token %}
           <div class="input-group w-100">
-            <input class="form-control border border-dark rounded-0" type="text" name="q"
-              placeholder="Search our site">
+            <input class="form-control border border-dark rounded-0" type="text" name="q" placeholder="Search our site">
             <button class="btn btn-outline-black border border-dark rounded-0" type="submit">
               <span class="icon">
                 <i class="fas fa-search"></i>
@@ -195,9 +195,6 @@
 
 
   {% endblock %}
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/3296bda619.js" crossorigin="anonymous"></script>
 
 </body>
 
