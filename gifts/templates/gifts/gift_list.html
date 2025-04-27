@@ -107,8 +107,16 @@
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('#btt-btn').fadeIn();
+            } else {
+                $('#btt-btn').fadeOut();
+            }
+        });
+
         $('#btt-btn').click(function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            $('html, body').animate({ scrollTop: 0 }, 'smooth'); // Smooth scroll to top
         });
 
         $('#sort-selector').change(function () {
